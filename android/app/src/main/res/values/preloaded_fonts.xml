@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
-<<<<<<< HEAD
+
         <item>@font/roboto</item>
         <item>@font/roboto_bold_italic</item>
-=======
+
         <item>@font/roboto_bold</item>
->>>>>>> made
+
     </array>
 </resources>

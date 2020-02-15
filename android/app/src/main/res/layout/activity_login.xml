@@ -41,6 +41,7 @@
         android:background="@drawable/rounded_button"
         android:text="Login"
         android:textColor="#8A97DD"
+        android:onClick="LoginMain"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
