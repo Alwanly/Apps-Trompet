@@ -41,7 +41,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/button_navigation" />
-``
+
     <TextView
         android:id="@+id/button"
         android:layout_width="347dp"
@@ -59,14 +59,14 @@
         android:layout_marginRight="29dp"
         android:background="@drawable/rounded"
         android:elevation="300dp"
-        android:text="Food and Goodies"
+        android:text="Pet Medicine"
+        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="35sp"
         android:textStyle="bold"
         android:typeface="normal"
         app:fontFamily="@font/roboto_medium"
         tools:layout_editor_absoluteX="350dp"
-        tools:layout_editor_absoluteY="176dp"
-android:textAlignment="center"/>
+        tools:layout_editor_absoluteY="176dp" />
 
 </RelativeLayout >
