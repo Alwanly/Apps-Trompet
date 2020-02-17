@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context=".MainActivity">
 
 
@@ -73,3 +74,7 @@
 ``
 
 </RelativeLayout >
+=======
+    android:background="#E5E7EC"
+    tools:context=".MainActivity" />
+>>>>>>> Dewi
