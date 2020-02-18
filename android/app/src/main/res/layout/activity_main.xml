@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-    tools:context=".MainActivity">
 
+    tools:context="com.example.rpl.trompey.MainActivity">
 
 
     <TextView
@@ -24,8 +23,9 @@
         android:layout_marginTop="104dp"
         android:layout_marginEnd="29dp"
         android:layout_marginRight="29dp"
-        android:background="@drawable/rounded"
+        android:background="@drawable/rounded_1"
         android:elevation="300dp"
+        android:gravity="center|center_horizontal"
         android:text="Food and Goodies"
         android:textColor="#000000"
         android:textSize="35sp"
@@ -33,8 +33,7 @@
         android:typeface="normal"
         app:fontFamily="@font/roboto_medium"
         tools:layout_editor_absoluteX="350dp"
-        tools:layout_editor_absoluteY="176dp"
-        android:textAlignment="center"/>
+        tools:layout_editor_absoluteY="176dp" />
 
 
     <TextView
@@ -66,7 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="79dp"
         android:layout_alignParentBottom="true"
-        android:background="#FFFFFF"
+        android:background="@color/white"
         app:itemTextColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,7 +73,3 @@
 ``
 
 </RelativeLayout >
-=======
-    android:background="#E5E7EC"
-    tools:context=".MainActivity" />
->>>>>>> Dewi
