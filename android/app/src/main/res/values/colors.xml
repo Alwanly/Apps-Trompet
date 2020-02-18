@@ -3,5 +3,14 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+<<<<<<< Updated upstream
     <color name="white">#FFFFFF</color>
+=======
+
+<color name="box">#FFF1ECEC</color>
+    <color name="button_login">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="button_daftar">#FFFFFF</color>
+
+>>>>>>> Stashed changes
 </resources>

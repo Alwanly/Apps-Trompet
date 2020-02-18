@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+<<<<<<< Updated upstream
         <item>@font/roboto_bold</item>
+=======
+
+
+        <item>@font/roboto</item>
+        <item>@font/roboto_bold_italic</item>
+
+        <item>@font/roboto_bold</item>
+
+
+        <item>@font/roboto_bold_italic</item>
+
+        <item>@font/roboto_thin</item>
+
+>>>>>>> Stashed changes
     </array>
 </resources>
