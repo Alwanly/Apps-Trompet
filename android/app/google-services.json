@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "126482966218",
+    "firebase_url": "https://trompet-e8f34.firebaseio.com",
+    "project_id": "trompet-e8f34",
+    "storage_bucket": "trompet-e8f34.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126482966218:android:8ab6d0f5f6225534897633",
+        "android_client_info": {
+          "package_name": "com.example.rpl.trompey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126482966218-qd6ut3clgd02pjstfgqf3gdeu1c1kt1n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mad.myfirebase",
+            "certificate_hash": "d93a5a9f6e015e3ba7707de16c4da96b1068801f"
+          }
+        },
+        {
+          "client_id": "126482966218-jdlrl5h6aikss62vllqarlaciain8o72.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJZwVF7KGEtYO8GY5n-hOXP2uXapvBnPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "126482966218-jdlrl5h6aikss62vllqarlaciain8o72.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
