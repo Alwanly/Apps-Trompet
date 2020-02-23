@@ -4,14 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-
     tools:context=".MainActivity">
-=======
->>>>>>> d2c8ba112c13f7d77b623a561761c166ea0c6e6a
-
-    tools:context="com.example.rpl.trompey.MainActivity">
-
 
     <TextView
         android:id="@+id/button"
@@ -77,7 +70,3 @@
         app:menu="@menu/button_navigation" />
 
 </RelativeLayout >
-<<<<<<< HEAD
-
-=======
->>>>>>> d2c8ba112c13f7d77b623a561761c166ea0c6e6a

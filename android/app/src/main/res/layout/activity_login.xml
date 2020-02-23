@@ -8,7 +8,7 @@
     tools:context=".LoginActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txt_akun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Belum mempunyai akun?"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.762" />
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txt_daftar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Daftar"
@@ -35,13 +35,13 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_login"
         android:layout_width="262dp"
         android:layout_height="36dp"
         android:background="@drawable/rounded_button"
+        android:onClick="LoginMain"
         android:text="Login"
         android:textColor="#8A97DD"
-        android:onClick="LoginMain"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -51,7 +51,7 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txt_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
@@ -67,7 +67,7 @@
         app:layout_constraintVertical_bias="0.244" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editText_email"
         android:layout_width="333dp"
         android:layout_height="44dp"
         android:ems="10"
@@ -83,8 +83,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.407" />
 
+
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editText_password"
         android:layout_width="329dp"
         android:layout_height="53dp"
         android:ems="10"
@@ -98,5 +99,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.522" />
+
+    <com.google.android.gms.common.internal.SignInButtonImpl
+        android:id="@+id/signInButtonImpl"
+        android:layout_width="297dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="241dp"
+        android:layout_marginBottom="68dp"
+        android:background="#673AB7"
+        android:text="Login dengan Google"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="119dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="61dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/signInButtonImpl"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/common_google_signin_btn_text_light_focused" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
