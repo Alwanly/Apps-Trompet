@@ -139,4 +139,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.google.android.gms.common.internal.SignInButtonImpl
+        android:id="@+id/signUpGoogle"
+        android:layout_width="55dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="40dp"
+        android:drawableBottom="@drawable/googleg_standard_color_18"
+        android:src="@drawable/google"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="366dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="40dp"
+        android:background="#673AB7"
+        android:gravity="center"
+        android:text="Daftar dengan Google"
+        android:textColor="@android:color/white"
+        app:fontFamily="@font/roboto_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/signUpGoogle" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
