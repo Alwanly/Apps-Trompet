@@ -11,7 +11,10 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".LoginActivity"></activity>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 743f17fc3eb7bfa671fdf9149a701e2d28b67a15
         <activity android:name=".RegistrasiActivity"></activity>
         <activity android:name=".MainActivity">
 
@@ -21,9 +24,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
+=======
 
      
 
+>>>>>>> 743f17fc3eb7bfa671fdf9149a701e2d28b67a15
 
         <meta-data
             android:name="preloaded_fonts"
