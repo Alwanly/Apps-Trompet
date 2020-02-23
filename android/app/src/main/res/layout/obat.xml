@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.example.rpl.trompey.MainActivity">
 
 
     <TextView
@@ -57,10 +57,11 @@
         android:layout_marginTop="104dp"
         android:layout_marginEnd="29dp"
         android:layout_marginRight="29dp"
-        android:background="@drawable/rounded"
+        android:background="@drawable/rounded_1"
         android:elevation="300dp"
+        android:gravity="center|center_horizontal"
         android:text="Pet Medicine"
-        android:textAlignment="center"
+        android:textAlignment="gravity"
         android:textColor="#000000"
         android:textSize="35sp"
         android:textStyle="bold"

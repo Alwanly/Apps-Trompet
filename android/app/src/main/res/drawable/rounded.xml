@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
+<<<<<<< HEAD
+=======
+
 <solid android:color="@color/white"/>
     <corners android:radius="60px"/>
 
+
+>>>>>>> 743f17fc3eb7bfa671fdf9149a701e2d28b67a15
+<solid android:color="@color/button_daftar"/>
+    <corners android:radius="150dp"/>
 
 </shape>
