@@ -42,4 +42,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(TransactionMedicines::class, 'id_user');
     }
+
+    public function transaction_foods()
+    {
+        return $this->hasMany(TransactionFoods::class, 'id_user');
+    }
 }
