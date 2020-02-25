@@ -2,16 +2,16 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
 
+
         <item>@font/roboto</item>
         <item>@font/roboto_bold_italic</item>
 
         <item>@font/roboto_bold</item>
 
-        =======
+
         <item>@font/roboto_bold_italic</item>
         <item>@font/roboto_medium</item>
-        <item>@font/roboto_regular</item>
         <item>@font/roboto_thin</item>
-        >>>>>>> Dewi
+
     </array>
 </resources>
