@@ -5,40 +5,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/iklan1"
     android:layout_width="match_parent"
-
-
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
 
-
-
-
-
-
-
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav-bot"
-        android:layout_width="match_parent"
-        android:layout_height="79dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/white"
-        app:itemTextColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/button_navigation" />
-
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/edit_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/nav-bot"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginEnd="93dp"
-        android:layout_marginRight="93dp"
-        android:layout_marginBottom="360dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="102dp"
+        android:layout_marginRight="102dp"
+        android:layout_marginBottom="343dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name" />
@@ -47,7 +28,7 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/editText3"
+        android:layout_above="@+id/edit_name"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginEnd="141dp"
@@ -56,15 +37,15 @@
         tools:src="@tools:sample/avatars" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/signOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/nav-bot"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="49dp"
+        android:layout_marginRight="49dp"
+        android:layout_marginBottom="45dp"
         android:text="Logout" />
 
 

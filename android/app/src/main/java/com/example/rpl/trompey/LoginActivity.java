@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -27,6 +28,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btnLogin;
+    TextView mtvDaftar;
     GoogleSignInClient mGoogleSignInClient;
     private FirebaseAuth mAuth;
     private static final int RC_SIGN_IN = 101 ;
@@ -35,6 +37,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         btnLogin = findViewById(R.id.btn_login);
+        mtvDaftar = findViewById(R.id.txt_daftar);
+        mtvDaftar.setOnClickListener(this);
+        btnLogin.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
         findViewById(R.id.signInButtonImpl).setOnClickListener(this);
@@ -65,9 +70,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            Log.d("sukses", "signInWithCredential:success");
+                            Log.d("Success", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(LoginActivity.this,"Success,",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this,user.getEmail(),Toast.LENGTH_SHORT).show();
                             finish();
                             startActivity(new Intent(LoginActivity.this,MainActivity.class));
                         } else {
@@ -94,15 +99,28 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btn_login:
+                Toast.makeText(this,"Login",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.signInButtonImpl:
+                signIn();
+                break;
+            case R.id.txt_daftar:
+                Intent intent = new Intent(this,RegistrasiActivity.class);
+                startActivity(intent);
+                break;
+                default:
+                    return;
+        }
+    }
+
+    private void signIn() {
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this,gso);
-        signIn();
-    }
-
-    private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
