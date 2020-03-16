@@ -17,6 +17,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -26,6 +35,7 @@ public class FragmentUser extends Fragment implements View.OnClickListener {
     FirebaseUser mFirebaseUser;
     EditText mUserView;
     Button msignOut;
+    GoogleApiClient mGoogleApiClient;
     private  View v;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         LayoutInflater lf = getActivity().getLayoutInflater();
@@ -36,21 +46,32 @@ public class FragmentUser extends Fragment implements View.OnClickListener {
         msignOut.setOnClickListener(this);
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
-
         mUserView.setText(mFirebaseUser.getDisplayName());
-
         return v;
     }
 
-
     @Override
     public void onClick(View v) {
-        mFirebaseAuth.signOut();
-        Intent intent = new Intent(getActivity(),LoginActivity.class);
-        getActivity().finish();
-        startActivity(intent);
-
+       switch (v.getId()){
+           case R.id.signOut:
+               signOut();
+               break;
+       }
     }
 
+    private void signOut() {
 
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getActivity().getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+        // Build a GoogleSignInClient with the options specified by gso.
+        GoogleSignInClient mGoogleSignInClient = GoogleSignIn.getClient(getActivity(), gso);
+        mGoogleSignInClient.signOut();
+        mFirebaseAuth.getInstance().signOut();
+        Intent login = new Intent(getActivity(),LoginActivity.class);
+        startActivity(login);
+        Toast.makeText(getActivity(),"Logout",Toast.LENGTH_SHORT).show();
+        getActivity().finish();
+    }
 }

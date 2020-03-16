@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth mFirebaseAuth;
     FirebaseUser mFirebaseUser;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -125,18 +125,18 @@
 <!--        android:layout_marginBottom="38dp"-->
 <!--        android:background="@drawable/rounded_menu" />-->
 
-<!--    <ImageView-->
-<!--        android:layout_width="267dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_above="@+id/nav-bot"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_alignParentRight="true"-->
-<!--        android:layout_marginEnd="159dp"-->
-<!--        android:layout_marginRight="159dp"-->
-<!--        android:layout_marginBottom="269dp"-->
-<!--        app:srcCompat="@drawable/iklan_1" />-->
+    <ImageView
+        android:layout_width="106dp"
+        android:layout_height="234dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_toStartOf="@+id/textView4"
+        android:layout_toLeftOf="@+id/textView4"
+        android:src="@drawable/iklan_1" />
 
-<!--    <TextView-->
+    <!--    <TextView-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
 <!--        android:layout_above="@+id/nav-bot"-->
@@ -201,43 +201,44 @@
 <!--        android:elevation="150dp"-->
 <!--        app:srcCompat="@drawable/logo_grooming" />-->
 
-<!--    <ImageView-->
 
-<!--        android:layout_width="69dp"-->
-<!--        android:layout_height="94dp"-->
-<!--        android:layout_above="@+id/nav-bot"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_alignParentRight="true"-->
-<!--        android:layout_marginEnd="90dp"-->
-<!--        android:layout_marginRight="90dp"-->
-<!--        android:layout_marginBottom="237dp"-->
-<!--        android:elevation="150dp"-->
-<!--        app:srcCompat="@drawable/logo_medicine" />-->
 
 <!--    <ImageView-->
-
 <!--        android:layout_width="69dp"-->
 <!--        android:layout_height="94dp"-->
-<!--        android:layout_above="@+id/nav-bot"-->
 <!--        android:layout_alignParentEnd="true"-->
 <!--        android:layout_alignParentRight="true"-->
-<!--        android:layout_marginEnd="257dp"-->
-<!--        android:layout_marginRight="257dp"-->
-<!--        android:layout_marginBottom="54dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginEnd="186dp"-->
+<!--        android:layout_marginRight="186dp"-->
+<!--        android:layout_marginBottom="196dp"-->
 <!--        android:elevation="150dp"-->
-<!--        app:srcCompat="@drawable/logo_pet_food" />-->
+<!--        android:src="@drawable/logo_medicine" />-->
 
 <!--    <ImageView-->
-
 <!--        android:layout_width="69dp"-->
 <!--        android:layout_height="94dp"-->
-<!--        android:layout_above="@+id/nav-bot"-->
+<!--        android:layout_below="@+id/button"-->
 <!--        android:layout_alignParentEnd="true"-->
 <!--        android:layout_alignParentRight="true"-->
-<!--        android:layout_marginEnd="87dp"-->
-<!--        android:layout_marginRight="87dp"-->
-<!--        android:layout_marginBottom="53dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginTop="64dp"-->
+<!--        android:layout_marginEnd="286dp"-->
+<!--        android:layout_marginRight="286dp"-->
+<!--        android:layout_marginBottom="301dp"-->
 <!--        android:elevation="150dp"-->
-<!--        app:srcCompat="@drawable/logo_dokter" />-->
+<!--        android:src="@drawable/logo_pet_food" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="69dp"-->
+<!--        android:layout_height="94dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginEnd="99dp"-->
+<!--        android:layout_marginRight="99dp"-->
+<!--        android:layout_marginBottom="301dp"-->
+<!--        android:elevation="150dp"-->
+<!--        android:src="@drawable/logo_dokter" />-->
 
 </RelativeLayout>
