@@ -4,8 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/iklan1"
     android:layout_width="match_parent"
-
-
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -14,11 +12,9 @@
         android:id="@+id/button"
         android:layout_width="348dp"
         android:layout_height="141dp"
-
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-
         android:layout_alignParentBottom="false"
         android:layout_marginStart="34dp"
         android:layout_marginLeft="34dp"
@@ -63,195 +59,186 @@
         android:layout_marginBottom="447dp"
         android:src="@drawable/logo_trompet" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav-bot"
-        android:layout_width="match_parent"
-        android:layout_height="79dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/white"
-        app:itemTextColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/button_navigation" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="213dp"
         android:layout_height="74dp"
-        android:layout_above="@+id/nav-bot"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="408dp"
+        android:layout_alignEnd="@+id/button"
+        android:layout_alignRight="@+id/button"
+        android:layout_alignBottom="@+id/button"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginBottom="34dp"
         android:text="Punya peliharaan bingung ngurus-nya? Pakai TROMPET saja!"
         android:textColor="#000000"
         android:textSize="15sp"
         app:fontFamily="@font/roboto_regular" />
 
-    <Button
-        android:id="@+id/button_menu_grooming"
-        android:layout_width="141dp"
-        android:layout_height="127dp"
-        android:layout_above="@+id/nav-bot"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="218dp"
-        android:layout_marginRight="218dp"
-        android:layout_marginBottom="228dp"
-        android:background="@drawable/rounded_menu"
-        android:elevation="100dp" />
+    <!--    <Button-->
+<!--        android:id="@+id/button_menu_grooming"-->
+<!--        android:layout_width="141dp"-->
+<!--        android:layout_height="127dp"-->
+<!--        android:layout_above="@+id/nav-bot"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginEnd="218dp"-->
+<!--        android:layout_marginRight="218dp"-->
+<!--        android:layout_marginBottom="228dp"-->
+<!--        android:background="@drawable/rounded_menu"-->
+<!--        android:elevation="100dp" />-->
 
-    <Button
-        android:id="@+id/button_menu_obat"
-        android:layout_width="141dp"
-        android:layout_height="127dp"
-        android:layout_above="@+id/nav-bot"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="227dp"
-        android:background="@drawable/rounded_menu" />
+<!--    <Button-->
+<!--        android:id="@+id/button_menu_obat"-->
+<!--        android:layout_width="141dp"-->
+<!--        android:layout_height="127dp"-->
+<!--        android:layout_above="@+id/nav-bot"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginEnd="50dp"-->
+<!--        android:layout_marginRight="50dp"-->
+<!--        android:layout_marginBottom="227dp"-->
+<!--        android:background="@drawable/rounded_menu" />-->
 
-    <Button
-        android:id="@+id/button_menu_makanan"
-        android:layout_width="141dp"
-        android:layout_height="127dp"
-        android:layout_above="@+id/nav-bot"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="220dp"
-        android:layout_marginRight="220dp"
-        android:layout_marginBottom="38dp"
-        android:background="@drawable/rounded_menu"
-        android:elevation="100dp" />
+<!--    <Button-->
+<!--        android:id="@+id/button_menu_makanan"-->
+<!--        android:layout_width="141dp"-->
+<!--        android:layout_height="127dp"-->
+<!--        android:layout_above="@+id/nav-bot"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginEnd="220dp"-->
+<!--        android:layout_marginRight="220dp"-->
+<!--        android:layout_marginBottom="38dp"-->
+<!--        android:background="@drawable/rounded_menu"-->
+<!--        android:elevation="100dp" />-->
 
-    <Button
-        android:id="@+id/button_menu_dokter"
-        android:layout_width="141dp"
-        android:layout_height="127dp"
-        android:layout_above="@+id/nav-bot"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="51dp"
-        android:layout_marginRight="51dp"
-        android:layout_marginBottom="38dp"
-        android:background="@drawable/rounded_menu" />
-
-    <ImageView
-        android:layout_width="267dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/nav-bot"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="159dp"
-        android:layout_marginRight="159dp"
-        android:layout_marginBottom="269dp"
-        app:srcCompat="@drawable/iklan_1" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/nav-bot"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="260dp"
-        android:layout_marginRight="260dp"
-        android:layout_marginBottom="204dp"
-        android:text="Grooming"
-        android:textColor="#000000"
-        app:fontFamily="@font/roboto_medium" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/nav-bot"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="75dp"
-        android:layout_marginRight="75dp"
-        android:layout_marginBottom="205dp"
-        android:text="Pet Medicine"
-        android:textColor="#000000"
-        app:fontFamily="@font/roboto_medium" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/nav-bot"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="262dp"
-        android:layout_marginRight="262dp"
-        android:layout_marginBottom="14dp"
-        android:text="Pet Food"
-        android:textColor="#000000"
-        app:fontFamily="@font/roboto_medium" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/nav-bot"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="98dp"
-        android:layout_marginRight="98dp"
-        android:layout_marginBottom="12dp"
-        android:text="Dr. Pet"
-        android:textColor="#000000"
-        app:fontFamily="@font/roboto_medium" />
+<!--    <Button-->
+<!--        android:id="@+id/button_menu_dokter"-->
+<!--        android:layout_width="141dp"-->
+<!--        android:layout_height="127dp"-->
+<!--        android:layout_above="@+id/nav-bot"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginEnd="51dp"-->
+<!--        android:layout_marginRight="51dp"-->
+<!--        android:layout_marginBottom="38dp"-->
+<!--        android:background="@drawable/rounded_menu" />-->
 
     <ImageView
+        android:layout_width="106dp"
+        android:layout_height="234dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_toStartOf="@+id/textView4"
+        android:layout_toLeftOf="@+id/textView4"
+        android:src="@drawable/iklan_1" />
 
-        android:layout_width="72dp"
-        android:layout_height="96dp"
-        android:layout_above="@+id/nav-bot"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="254dp"
-        android:layout_marginRight="254dp"
-        android:layout_marginBottom="241dp"
-        android:elevation="150dp"
-        app:srcCompat="@drawable/logo_grooming" />
+    <!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@+id/nav-bot"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginEnd="260dp"-->
+<!--        android:layout_marginRight="260dp"-->
+<!--        android:layout_marginBottom="204dp"-->
+<!--        android:text="Grooming"-->
+<!--        android:textColor="#000000"-->
+<!--        app:fontFamily="@font/roboto_medium" />-->
 
-    <ImageView
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@+id/nav-bot"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginEnd="75dp"-->
+<!--        android:layout_marginRight="75dp"-->
+<!--        android:layout_marginBottom="205dp"-->
+<!--        android:text="Pet Medicine"-->
+<!--        android:textColor="#000000"-->
+<!--        app:fontFamily="@font/roboto_medium" />-->
 
-        android:layout_width="69dp"
-        android:layout_height="94dp"
-        android:layout_above="@+id/nav-bot"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="90dp"
-        android:layout_marginRight="90dp"
-        android:layout_marginBottom="237dp"
-        android:elevation="150dp"
-        app:srcCompat="@drawable/logo_medicine" />
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@+id/nav-bot"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginEnd="262dp"-->
+<!--        android:layout_marginRight="262dp"-->
+<!--        android:layout_marginBottom="14dp"-->
+<!--        android:text="Pet Food"-->
+<!--        android:textColor="#000000"-->
+<!--        app:fontFamily="@font/roboto_medium" />-->
 
-    <ImageView
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@+id/nav-bot"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginEnd="98dp"-->
+<!--        android:layout_marginRight="98dp"-->
+<!--        android:layout_marginBottom="12dp"-->
+<!--        android:text="Dr. Pet"-->
+<!--        android:textColor="#000000"-->
+<!--        app:fontFamily="@font/roboto_medium" />-->
 
-        android:layout_width="69dp"
-        android:layout_height="94dp"
-        android:layout_above="@+id/nav-bot"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="257dp"
-        android:layout_marginRight="257dp"
-        android:layout_marginBottom="54dp"
-        android:elevation="150dp"
-        app:srcCompat="@drawable/logo_pet_food" />
+<!--    <ImageView-->
 
-    <ImageView
+<!--        android:layout_width="72dp"-->
+<!--        android:layout_height="96dp"-->
+<!--        android:layout_above="@+id/nav-bot"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginEnd="254dp"-->
+<!--        android:layout_marginRight="254dp"-->
+<!--        android:layout_marginBottom="241dp"-->
+<!--        android:elevation="150dp"-->
+<!--        app:srcCompat="@drawable/logo_grooming" />-->
 
-        android:layout_width="69dp"
-        android:layout_height="94dp"
-        android:layout_above="@+id/nav-bot"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="87dp"
-        android:layout_marginRight="87dp"
-        android:layout_marginBottom="53dp"
-        android:elevation="150dp"
-        app:srcCompat="@drawable/logo_dokter" />
+
+
+<!--    <ImageView-->
+<!--        android:layout_width="69dp"-->
+<!--        android:layout_height="94dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginEnd="186dp"-->
+<!--        android:layout_marginRight="186dp"-->
+<!--        android:layout_marginBottom="196dp"-->
+<!--        android:elevation="150dp"-->
+<!--        android:src="@drawable/logo_medicine" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="69dp"-->
+<!--        android:layout_height="94dp"-->
+<!--        android:layout_below="@+id/button"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginTop="64dp"-->
+<!--        android:layout_marginEnd="286dp"-->
+<!--        android:layout_marginRight="286dp"-->
+<!--        android:layout_marginBottom="301dp"-->
+<!--        android:elevation="150dp"-->
+<!--        android:src="@drawable/logo_pet_food" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="69dp"-->
+<!--        android:layout_height="94dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginEnd="99dp"-->
+<!--        android:layout_marginRight="99dp"-->
+<!--        android:layout_marginBottom="301dp"-->
+<!--        android:elevation="150dp"-->
+<!--        android:src="@drawable/logo_dokter" />-->
 
 </RelativeLayout>
