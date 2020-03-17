@@ -20,4 +20,4 @@
 Route::post('/register','api\AuthController@register');
 Route::post('/login','api\AuthController@login');
 
-Route::post('/medicine', 'api\MedicineController@index');
+Route::post('/medicine', 'api\MedicineController@store');

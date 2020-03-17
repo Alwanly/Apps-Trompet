@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class TransactionFoods extends Model
 {
     protected $tables = 'transaction_foods';
-    protected $fillable = ['id_user', 'id_foods'];
+    protected $fillable = ['id_user', 'id_foods', 'quantity', 'total'];
 
     public function medicines()
     {

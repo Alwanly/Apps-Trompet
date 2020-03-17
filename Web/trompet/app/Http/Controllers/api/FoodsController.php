@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Foods;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Medicines;
-use App\TransactionMedicines;
 
-class MedicineController extends Controller
+class FoodsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,21 +26,16 @@ class MedicineController extends Controller
      */
     public function store(Request $request)
     {
-        TransactionMedicines::create([
-            'id_user' => $request->id_user,
-            'quantity' => $request->quantity,
-            'total' => $request->total
-            ]);
-            return response(['status'=>'success']);
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Foods  $foods
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Foods $foods)
     {
         //
     }
@@ -50,10 +44,10 @@ class MedicineController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Foods  $foods
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Foods $foods)
     {
         //
     }
@@ -61,10 +55,10 @@ class MedicineController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Foods  $foods
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Foods $foods)
     {
         //
     }

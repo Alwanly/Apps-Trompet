@@ -19,6 +19,7 @@ class CreateTransactionFoodsTables extends Migration
             $table->foreign('id_user')->references('id')->on('users');
             $table->unsignedBigInteger('id_foods');
             $table->foreign('id_foods')->references('id')->on('foods');
+            $table->double('quantity');
             $table->double('total');
             $table->timestamps();
         });

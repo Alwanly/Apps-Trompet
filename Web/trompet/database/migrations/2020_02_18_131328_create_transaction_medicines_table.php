@@ -19,6 +19,7 @@ class CreateTransactionMedicinesTable extends Migration
             $table->foreign('id_user')->references('id')->on('users');
             $table->unsignedBigInteger('id_medicines');
             $table->foreign('id_medicines')->references('id')->on('medicines');
+            $table->double('quantity');
             $table->double('total');
             $table->timestamps();
         });
