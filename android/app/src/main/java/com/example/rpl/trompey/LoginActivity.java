@@ -101,6 +101,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_login:
+                Intent menumakan = new Intent(this,MenuMakananActivity.class);
+                startActivity(menumakan);
                 Toast.makeText(this,"Login",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.signInButtonImpl:
@@ -124,4 +126,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
-}
+
+
+    }
+
