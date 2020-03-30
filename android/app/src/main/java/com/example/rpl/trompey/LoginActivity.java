@@ -101,6 +101,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_login:
+                Intent login = new Intent(this, ObatHewan.class);
+                startActivity(login);
                 Toast.makeText(this,"Login",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.signInButtonImpl:
