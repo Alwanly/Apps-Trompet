@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Trompey</string>
+    <string name="garis">- - - - - - - - - - - - - - - - - - - - - - - - - - -</string>
 
     <string-array name="member_names">
         <item>Me-o Cat Food</item>

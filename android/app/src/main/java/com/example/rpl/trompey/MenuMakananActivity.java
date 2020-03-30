@@ -9,6 +9,6 @@ public class MenuMakananActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_makanan);
+        setContentView(R.layout.activity_pembayaran_makanan);
     }
 }
