@@ -1,6 +1,32 @@
 <resources>
     <string name="app_name">Trompey</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="member_names">
+        <item>Me-o Cat Food</item>
+        <item>Cleo Cat Food</item>
+        <item>Maxi Cat Food</item>
+
+    </string-array>
+
+    <string-array name="profile_pics">
+        <item>@drawable/cat1_f</item>
+        <item>@drawable/cat2_f</item>
+        <item>@drawable/cat3_f</item>
+
+    </string-array>
+
+    <string-array name="status">
+        <item>Rp. 40000</item>
+        <item>Rp. 40000</item>
+        <item>Rp. 40000</item>
+
+    </string-array>
+
+    <string-array name="contact_type">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
 </resources>
