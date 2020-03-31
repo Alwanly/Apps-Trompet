@@ -9,10 +9,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
-
-
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -64,26 +60,38 @@
 
         </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="wrap_content">
 
             <ListView
                 android:id="@+id/list"
                 android:layout_width="match_parent"
-                android:layout_height="330dp"
+                android:layout_height="250dp"
                 android:layout_marginTop="10dp"
                 android:background="#FFFFFF"
                 android:divider="@drawable/divider"
                 android:dividerHeight="20dp"
-                android:footerDividersEnabled="true"
                 android:paddingRight="0dp">
 
             </ListView>
+        </RelativeLayout>
 
-        </LinearLayout>
-    </LinearLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav-bot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:elevation="30dp"
+        app:itemTextColor="#000000"
+        app:menu="@menu/button_navigation" />
+
+</RelativeLayout>
+</LinearLayout>
 
 
 

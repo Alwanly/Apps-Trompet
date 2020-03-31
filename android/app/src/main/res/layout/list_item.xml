@@ -39,7 +39,7 @@
         android:id="@+id/beli1"
         android:layout_width="wrap_content"
         android:layout_height="31dp"
-        android:layout_gravity="bottom|center"
+        android:layout_gravity="center"
         android:layout_marginBottom="10dp"
         android:background="@drawable/judulmakanan"
         android:text="Beli"
