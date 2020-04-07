@@ -30,7 +30,6 @@
         android:typeface="normal"
 
         app:fontFamily="@font/roboto_medium"
-        tools:layout_editor_absoluteX="350dp"
         tools:layout_editor_absoluteY="176dp" />
 
 
@@ -88,16 +87,102 @@
         android:layout_toLeftOf="@+id/textView4"
         android:src="@drawable/iklan_1" />
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/logo_dokter"
-        android:layout_below="@id/button"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="20dp"
-        android:layout_alignParentLeft="true"
-        android:id="@+id/menu_grooming"/>
+    <LinearLayout
+    android:id="@+id/menu1"
+    android:layout_marginStart="80dp"
+    android:layout_below="@id/button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="30dp">
 
+    <LinearLayout
+        android:id="@+id/menu_doctor"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:layout_width="100dp"
+        android:layout_height="100dp">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_dokter"/>
+        <TextView
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Doctor"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:id="@+id/menu_pet_food"
+            android:orientation="vertical"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@mipmap/ic_pet_food"/>
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pet Food"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu2"
+        android:layout_marginStart="80dp"
+        android:layout_below="@id/menu1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp">
+
+        <LinearLayout
+            android:id="@+id/menu_grooming"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@mipmap/ic_grooming"/>
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Grooming"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/menu_medicine"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@mipmap/ic_medicine"/>
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medicine"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </RelativeLayout>
