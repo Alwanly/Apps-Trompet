@@ -1,35 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.rpl.trompey.MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/bgapps">
 
 
-    <TextView
-        android:id="@+id/textView6"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="166dp"
-        android:background="#5D6FAF"
-        tools:layout_editor_absoluteX="-8dp"
-        tools:layout_editor_absoluteY="-15dp" />
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="181dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="104dp"
-        android:layout_marginLeft="104dp"
-        android:layout_marginTop="-21dp"
-        android:layout_marginEnd="107dp"
-        android:layout_marginRight="107dp"
-        android:layout_marginBottom="447dp"
-        android:src="@drawable/logo_trompet" />
+        <ImageView
+            android:layout_width="407dp"
+            android:layout_height="178dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="-50dp"
+            android:src="@drawable/logo_trompet">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/petgrooming"
+            android:layout_width="386dp"
+            android:layout_height="151dp"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/rounded_1"
+            android:elevation="20dp"
+            android:gravity="center"
+            android:text="Pet Grooming"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="13dp">
+
+        </TextView>
+    </RelativeLayout>
+
+
+    <ScrollView
+
+        android:layout_width="398dp"
+        android:layout_height="377dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <LinearLayout
+            android:layout_width="404dp"
+            android:layout_height="324dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView_Diamond"
+            app:layout_constraintVertical_bias="0.707"
+            tools:layout_editor_absoluteX="-31dp">
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="@dimen/cardview_compat_inset_shadow"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="15dp"
+                android:elevation="30dp"
+                app:cardBackgroundColor="#5D6FAF"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="20dp">
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:background="#005D6FAF"
+                    android:gravity="center|top"
+                    android:text="A"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="340dp"
+                    android:layout_height="150dp"
+                    android:background="#005D6FAF"
+                    android:gravity="center|left"
+                    android:text="  Paket"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="340dp"
+                    android:layout_height="110dp"
+                    android:background="#005D6FAF"
+                    android:gravity="left|bottom"
+                    android:text="  _______________"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="340dp"
+                    android:layout_height="280dp"
+                    android:background="#005D6FAF"
+                    android:gravity="center|left"
+                    android:text="  Cukur Bulu"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="340dp"
+                    android:layout_height="330dp"
+                    android:background="#005D6FAF"
+                    android:gravity="center|left"
+                    android:text="  Gunting Kuku"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="340dp"
+                    android:layout_height="380dp"
+                    android:background="#005D6FAF"
+                    android:gravity="center|left"
+                    android:text="  Mandi"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="340dp"
+                    android:layout_height="420dp"
+                    android:background="#005D6FAF"
+                    android:gravity="center|left"
+                    android:text="  Free Shampoo"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="340dp"
+                    android:layout_height="250dp"
+                    android:background="#005D6FAF"
+                    android:gravity="left|bottom"
+                    android:text="  _______________"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"/>
+
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="340dp"
+                    android:layout_height="520dp"
+                    android:background="#005D6FAF"
+                    android:gravity="center|left"
+                    android:text="  Harga : Rp.250.000"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"/>
+
+
+                <Button
+                    android:id="@+id/book"
+                    android:layout_width="212dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/rounded_1"
+                    android:text="Book"
+                    android:textColor="#8A97DD" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible">
+
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible">
+
+            </Button>
+
+
+        </LinearLayout>
+    </ScrollView>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav-bot"
@@ -42,154 +210,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/button_navigation" />
 
-    <TextView
-        android:id="@+id/button"
-        android:layout_width="347dp"
-        android:layout_height="168dp"
 
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-
-        android:layout_alignParentBottom="false"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginRight="29dp"
-        android:background="@drawable/rounded_1"
-        android:elevation="300dp"
-        android:gravity="center|center_horizontal"
-        android:text="Pet Grooming"
-        android:textAlignment="gravity"
-        android:textColor="#000000"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        android:typeface="normal"
-        app:fontFamily="@font/roboto_medium"
-        tools:layout_editor_absoluteX="350dp"
-        tools:layout_editor_absoluteY="176dp" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="334dp"
-        android:layout_height="323dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginEnd="34dp"
-        android:layout_marginRight="34dp"
-        android:layout_marginBottom="112dp"
-        android:elevation="30dp"
-        app:cardBackgroundColor="#5D6FAF"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="20dp">
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="340dp"
-            android:layout_height="wrap_content"
-            android:background="#005D6FAF"
-            android:gravity="center|top"
-            android:text="A"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"/>
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="340dp"
-            android:layout_height="150dp"
-            android:background="#005D6FAF"
-            android:gravity="center|right|left"
-            android:text="Paket"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"/>
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="340dp"
-            android:layout_height="110dp"
-            android:background="#005D6FAF"
-            android:gravity="left|bottom"
-            android:text="_______________"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"/>
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="340dp"
-            android:layout_height="280dp"
-            android:background="#005D6FAF"
-            android:gravity="center|right|left"
-            android:text="Cukur Bulu"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"/>
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="340dp"
-            android:layout_height="330dp"
-            android:background="#005D6FAF"
-            android:gravity="center|right|left"
-            android:text="Gunting Kuku"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"/>
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="340dp"
-            android:layout_height="380dp"
-            android:background="#005D6FAF"
-            android:gravity="center|right|left"
-            android:text="Mandi"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"/>
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="340dp"
-            android:layout_height="420dp"
-            android:background="#005D6FAF"
-            android:gravity="center|right|left"
-            android:text="Free Shampoo"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"/>
-
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="340dp"
-            android:layout_height="250dp"
-            android:background="#005D6FAF"
-            android:gravity="left|bottom"
-            android:text="_______________"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"/>
-
-
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="340dp"
-            android:layout_height="520dp"
-            android:background="#005D6FAF"
-            android:gravity="center|right|left"
-            android:text="Harga : Rp.250.000"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"/>
-
-        <Button
-            android:id="@+id/button_book"
-            android:layout_width="212dp"
-            android:layout_height="38dp"
-            android:layout_gravity="bottom|center"
-            android:layout_marginBottom="0dp"
-            android:background="@drawable/rounded_1"
-            android:text="Book"
-            android:textColor="#8A97DD" />
-
-
-    </androidx.cardview.widget.CardView>
-
-
-
-
-</RelativeLayout >
+</androidx.constraintlayout.widget.ConstraintLayout>
