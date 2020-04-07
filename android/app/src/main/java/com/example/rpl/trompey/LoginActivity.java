@@ -80,8 +80,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             Log.w("error", "signInWithCredential:failure", task.getException());
 
                         }
-
-
                     }
                 });
     }
@@ -102,6 +100,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()){
             case R.id.btn_login:
                 Toast.makeText(this,"Login",Toast.LENGTH_SHORT).show();
+                finish();
+                Intent menu = new Intent(this, MainActivity.class);
+                startActivity(menu);
                 break;
             case R.id.signInButtonImpl:
                 signIn();
