@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_gravity="center"
-        android:contentDescription="desc"
+        android:contentDescription="@string/desc"
         android:paddingLeft="10dp"
         android:paddingRight="10dp" />
 
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:text="txt"
+        android:text="@string/txt1"
         android:textSize="25dp"
         android:textStyle="bold" />
 
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:paddingBottom="10dp"
-        android:text="txt"
+        android:text="@string/txt"
         android:textSize="20dp" />
 
 
@@ -42,7 +42,8 @@
         android:layout_gravity="center"
         android:layout_marginBottom="10dp"
         android:background="@drawable/judulmakanan"
-        android:text="Beli"
+        android:text="@string/beli"
+        android:onClick="beli"
         android:textColor="#FFFFFF" />
 
 

@@ -2,10 +2,12 @@ package com.example.rpl.trompey;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -13,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MenuMakananActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
-
+private Button button;
     String[] member_names;
     TypedArray profile_pics;
     String[] status;
@@ -27,6 +29,10 @@ public class MenuMakananActivity extends AppCompatActivity implements AdapterVie
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_makanan);
+
+
+
+
 
 //buat listview
         rowItems = new ArrayList<RowItem>();
@@ -55,5 +61,15 @@ public class MenuMakananActivity extends AppCompatActivity implements AdapterVie
         String member_name = rowItems.get(position).getMember_name();
         Toast.makeText(getApplicationContext(), "" + member_name,
                 Toast.LENGTH_SHORT).show();
+
+    }
+
+    public void beli(View view) {
+        Intent beli1 = new Intent(MenuMakananActivity.this, PembayaranMakananActivity.class);
+        startActivity(beli1);
     }
 }
+
+
+
+

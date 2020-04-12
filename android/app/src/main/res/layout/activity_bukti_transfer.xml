@@ -32,7 +32,7 @@
             android:background="@drawable/rounded_1"
             android:elevation="20dp"
             android:gravity="center"
-            android:text="Pet Food"
+            android:text="@string/pet_food"
             android:textColor="#000000"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -66,7 +66,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="350dp"
-                android:layout_height="350dp"
+                android:layout_height="250dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginRight="@dimen/cardview_compat_inset_shadow"
                 android:layout_marginBottom="30dp"
@@ -76,14 +76,6 @@
                 app:cardCornerRadius="10dp"
                 app:cardElevation="20dp">
 
-                <TextView
-                    android:layout_width="340dp"
-                    android:layout_height="wrap_content"
-                    android:background="#005D6FAF"
-                    android:gravity="center|top"
-                    android:text="Silahkan transfer total belanjaan ke nomor rekening dibawah ini:"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
 
                 <TextView
 
@@ -92,7 +84,7 @@
                     android:layout_height="184dp"
                     android:background="#005D6FAF"
                     android:gravity="center"
-                    android:text="002-002-002-002"
+                    android:text="@string/transfer"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
 
@@ -114,20 +106,10 @@
                     android:layout_height="263dp"
                     android:background="#005D6FAF"
                     android:gravity="center"
-                    android:text="Kantong Belanja"
+                    android:text="@string/transfer2"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/beli1"
-                    android:layout_width="212dp"
-                    android:layout_height="38dp"
-                    android:layout_gravity="bottom|center"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/judulmakanan"
-                    android:text="@string/upload_bukti_transfer"
-                    android:onClick="upload"
-                    android:textColor="#FFFFFF" />
 
 
             </androidx.cardview.widget.CardView>

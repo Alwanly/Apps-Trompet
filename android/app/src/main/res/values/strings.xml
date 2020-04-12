@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">Trompey</string>
     <string name="garis">- - - - - - - - - - - - - - - - - - - - - - - - - - -</string>
+    <string name="pet_food">Pet Food</string>
+    <string name="transfer">Bukti transfer berhasil diupload</string>
+    <string name="transfer2">Silahkan ambil produk di toko</string>
+    <string name="beli">Beli</string>
+    <string name="txt">txt</string>
+    <string name="txt1">txt</string>
+    <string name="desc">desc</string>
+    <string name="upload_bukti_transfer">Upload Bukti Transfer</string>
 
     <string-array name="member_names">
         <item>Me-o Cat Food</item>
