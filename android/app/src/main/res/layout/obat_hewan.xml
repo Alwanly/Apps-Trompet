@@ -2,25 +2,19 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#F3852E"
-    app:cardCornerRadius="5dp"
-    android:layout_margin="16dp"
-    android:orientation="vertical">
-
+    android:layout_margin="16dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp">
         <ImageView
+            android:layout_gravity="center"
             android:id="@+id/gambar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/todo"
-            android:src="@drawable/vit1" />
-
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/todo"/>
         <TextView
             android:id="@+id/nama"
             android:layout_width="match_parent"
@@ -29,7 +23,6 @@
             tools:text="nama 1"
             android:textColor="#000000"
             android:textSize="20sp" />
-
         <TextView
             android:id="@+id/harga"
             android:layout_width="match_parent"
@@ -38,7 +31,6 @@
             tools:text="harga 1"
             android:textColor="#000000"
             android:textSize="16sp" />
-
         <Button
             android:id="@+id/btn_beli"
             android:layout_width="wrap_content"
@@ -49,7 +41,6 @@
             android:text="@string/beli"
             android:textColor="#FFFFFF"
             android:onClick="beli_obat" />
-
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

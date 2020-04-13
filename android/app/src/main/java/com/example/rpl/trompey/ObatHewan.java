@@ -4,8 +4,10 @@ import android.content.res.TypedArray;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,7 +16,7 @@ import java.util.ArrayList;
 public class ObatHewan extends AppCompatActivity {
 
     private RecyclerView rvObatHewan;
-    private ArrayList<Obat> obat;
+    private ArrayList<Obat> obatlist;
     private ObatAdapter mAdapter;
 
     @Override
@@ -26,11 +28,10 @@ public class ObatHewan extends AppCompatActivity {
 
         rvObatHewan = findViewById(R.id.rv_obat_hewan);
 
-        rvObatHewan.setLayoutManager(new LinearLayoutManager(this));
+        rvObatHewan.setLayoutManager(new GridLayoutManager(this,2));
 
-        obat = new ArrayList<>();
-        mAdapter = new ObatAdapter(this, obat);
-
+        obatlist = new ArrayList<>();
+        mAdapter = new ObatAdapter(this,obatlist);
         rvObatHewan.setAdapter(mAdapter);
 
         getDataObat();
@@ -41,13 +42,13 @@ public class ObatHewan extends AppCompatActivity {
         String[] harga = getResources().getStringArray(R.array.harga_obat);
         TypedArray gambar = getResources().obtainTypedArray(R.array.gambar_obat);
 
-        obat.clear();
+
+        obatlist.clear();
 
         for (int i = 0; i < nama.length; i++) {
-            obat.add(new Obat(nama[i], harga[i],
+            obatlist.add(new Obat(nama[i], harga[i],
                     gambar.getResourceId(i, 0)));
         }
-
         gambar.recycle();
         mAdapter.notifyDataSetChanged();
     }

@@ -11,9 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ObatHewanCheckOut"></activity>
-        <activity android:name=".ObatHewanBayar" />
-        <activity android:name=".ObatHewan" />
+        <activity android:name=".ObatHewanCheckOut" android:parentActivityName=".ObatHewan" android:theme="@style/ActionBar"></activity>
+        <activity android:name=".ObatHewanBayar" android:parentActivityName=".ObatHewan" android:theme="@style/ActionBar" />
+        <activity android:name=".ObatHewan" android:parentActivityName=".MainActivity" android:theme="@style/ActionBar" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,6 @@
         </activity>
         <activity android:name=".RegistrasiActivity" />
         <activity android:name=".MainActivity" />
-
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

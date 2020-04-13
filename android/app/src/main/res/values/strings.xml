@@ -21,9 +21,9 @@
         <item>Rp. 35.000</item>
     </string-array>
 
-    <array name="gambar_obat">
-        <item>@drawable/vit1</item>
-        <item>@drawable/vit2</item>
-        <item>@drawable/vit3</item>
-    </array>
+    <string-array name="gambar_obat">
+        <item>@drawable/logo_grooming</item>
+        <item>@drawable/logo_grooming</item>
+        <item>@drawable/logo_grooming</item>
+    </string-array>
 </resources>
