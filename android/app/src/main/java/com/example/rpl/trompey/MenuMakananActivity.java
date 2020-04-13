@@ -1,6 +1,8 @@
 package com.example.rpl.trompey;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.res.TypedArray;
@@ -15,16 +17,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MenuMakananActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
-private Button button;
-    String[] member_names;
-    TypedArray profile_pics;
-    String[] status;
-    String[] contact_type;
-
-    List<RowItem> rowItems;
-    ListView mylistview;
 
 
+    private ArrayList<RowItem> rowItems;
+    private String[] member_names;
+    private TypedArray profile_pics;
+    private String[] status;
+    private String[] contact_type;
+    private RecyclerView mylistview;
+    private CostumAdapter adapterlist;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,9 +33,6 @@ private Button button;
 
 
 
-
-
-//buat listview
         rowItems = new ArrayList<RowItem>();
         member_names = getResources().getStringArray(R.array.member_names);
         profile_pics = getResources().obtainTypedArray(R.array.profile_pics);
@@ -47,11 +45,12 @@ private Button button;
                     contact_type[i]);
             rowItems.add(item);
         }
-        mylistview = (ListView) findViewById(R.id.list);
-        CostumAdapter adapterlist = new CostumAdapter(this, rowItems);
+        mylistview = findViewById(R.id.list);
+        mylistview.setLayoutManager(new GridLayoutManager(this,2));
+        adapterlist = new CostumAdapter(this, rowItems);
         mylistview.setAdapter(adapterlist);
 
-        mylistview.setOnItemClickListener(this);
+//        mylistview.setOnItemClickListener(this);
 
 
     }
@@ -67,6 +66,11 @@ private Button button;
     public void beli(View view) {
         Intent beli1 = new Intent(MenuMakananActivity.this, PembayaranMakananActivity.class);
         startActivity(beli1);
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
     }
 }
 

@@ -21,11 +21,10 @@
         <item>@drawable/cat1_f</item>
         <item>@drawable/cat2_f</item>
         <item>@drawable/cat3_f</item>
-
+    </string-array>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="vitamin">Vitamin</string>
-    <string name="beli">Beli</string>
     <string name="Beli_Obat">BELI</string>
     <string name="pet_medicine">Pet Medicine</string>
     <string name="todo">TODO</string>
@@ -46,7 +45,6 @@
         <item>@drawable/logo_grooming</item>
         <item>@drawable/logo_grooming</item>
         <item>@drawable/logo_grooming</item>
-    </string-array>
     </string-array>
 
     <string-array name="status">

@@ -41,11 +41,13 @@ public class FragmentHome extends Fragment implements View.OnClickListener {
                 Toast.makeText(getActivity(),"Grooming",Toast.LENGTH_SHORT).show();
                 break;
                 case R.id.menu_medicine:
+                    Intent obat = new Intent(getActivity(),ObatHewan.class);
+                    getActivity().startActivity(obat);
                 Toast.makeText(getActivity(),"Medicice",Toast.LENGTH_SHORT).show();
                 break;
                 case R.id.menu_pet_food:
-                    Intent obat = new Intent(getActivity(),ObatHewan.class);
-                    getActivity().startActivity(obat);
+                    Intent food = new Intent(getActivity(),MenuMakananActivity.class);
+                    getActivity().startActivity(food);
                 Toast.makeText(getActivity(),"Pet Food",Toast.LENGTH_SHORT).show();
                 break;
         }
