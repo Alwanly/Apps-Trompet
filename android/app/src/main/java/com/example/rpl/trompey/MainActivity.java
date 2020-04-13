@@ -1,20 +1,25 @@
 package com.example.rpl.trompey;
 
+import android.content.Intent;
+import android.content.res.TypedArray;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
+import android.app.Activity;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.widget.TableLayout;
-import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity  {
 
     FirebaseAuth mFirebaseAuth;
     FirebaseUser mFirebaseUser;
@@ -60,4 +65,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }
