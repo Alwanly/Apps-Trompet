@@ -76,7 +76,7 @@
                 app:cardCornerRadius="10dp"
                 app:cardElevation="20dp">
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/tv_paket"
                     android:layout_width="340dp"
                     android:layout_height="wrap_content"
                     android:background="#005D6FAF"
@@ -98,7 +98,7 @@
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="340dp"
-                    android:layout_height="110dp"
+                    android:layout_height="100dp"
                     android:background="#005D6FAF"
                     android:gravity="left|bottom"
                     android:text="  _______________"
@@ -106,7 +106,7 @@
                     android:textSize="20sp"/>
 
                 <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/tv_isi"
                     android:layout_width="340dp"
                     android:layout_height="280dp"
                     android:background="#005D6FAF"
@@ -115,40 +115,12 @@
                     android:textColor="#FFFFFF"
                     android:textSize="20sp"/>
 
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="340dp"
-                    android:layout_height="330dp"
-                    android:background="#005D6FAF"
-                    android:gravity="center|left"
-                    android:text="  Gunting Kuku"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"/>
 
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="340dp"
-                    android:layout_height="380dp"
-                    android:background="#005D6FAF"
-                    android:gravity="center|left"
-                    android:text="  Mandi"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"/>
-
-                <TextView
-                    android:id="@+id/textView14"
-                    android:layout_width="340dp"
-                    android:layout_height="420dp"
-                    android:background="#005D6FAF"
-                    android:gravity="center|left"
-                    android:text="  Free Shampoo"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"/>
 
                 <TextView
                     android:id="@+id/textView15"
                     android:layout_width="340dp"
-                    android:layout_height="250dp"
+                    android:layout_height="200dp"
                     android:background="#005D6FAF"
                     android:gravity="left|bottom"
                     android:text="  _______________"
@@ -157,9 +129,9 @@
 
 
                 <TextView
-                    android:id="@+id/textView16"
+                    android:id="@+id/tv_harga"
                     android:layout_width="340dp"
-                    android:layout_height="520dp"
+                    android:layout_height="480dp"
                     android:background="#005D6FAF"
                     android:gravity="center|left"
                     android:text="  Harga : Rp.250.000"
@@ -174,8 +146,10 @@
                     android:layout_gravity="bottom|center"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/rounded_1"
-                    android:text="Book"
-                    android:textColor="#8A97DD" />
+                    android:text="@string/Book"
+                    android:onClick="Book"
+                    android:textColor="#8A97DD"/>
+
 
 
             </androidx.cardview.widget.CardView>
