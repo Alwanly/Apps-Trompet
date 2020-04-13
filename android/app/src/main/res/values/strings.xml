@@ -61,4 +61,14 @@
         <item></item>
     </string-array>
 
+    <string name="A">A</string>
+    <string name="B">B</string>
+    <string name="C">C</string>
+    <string name="Diamond">Diamond</string>
+    <string name="Gold">Gold</string>
+    <string name="Silver">Silver</string>
+    <string name="Book">Book</string>
+    <string name="Paket">Paket</string>
+    <string name="Isi">Isi</string>
+    <string name="Harga">Harga</string>
 </resources>
