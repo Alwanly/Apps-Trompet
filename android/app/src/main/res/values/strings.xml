@@ -4,14 +4,26 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="vitamin">Vitamin</string>
-    <string name="nutri_plus_gel">Nutri-plus Gel</string>
-    <string name="rp_30_000">Rp. 30.000</string>
     <string name="beli">Beli</string>
-    <string name="megaderm">Megaderm</string>
     <string name="Beli_Obat">BELI</string>
-    <string name="rp_40_000">Rp. 40.000</string>
-    <string name="megaderm_sachet">Megaderm Sachet</string>
-    <string name="rp_35_000">Rp. 35.000</string>
     <string name="pet_medicine">Pet Medicine</string>
     <string name="todo">TODO</string>
+
+    <string-array name="nama_obat">
+        <item>Nutri-plus Gel</item>
+        <item>Megaderm</item>
+        <item>Megaderm Sachet</item>
+    </string-array>
+
+    <string-array name="harga_obat">
+        <item>Rp. 30.000</item>
+        <item>Rp. 40.000</item>
+        <item>Rp. 35.000</item>
+    </string-array>
+
+    <array name="gambar_obat">
+        <item>@drawable/vit1</item>
+        <item>@drawable/vit2</item>
+        <item>@drawable/vit3</item>
+    </array>
 </resources>

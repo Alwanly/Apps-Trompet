@@ -14,19 +14,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/judulmenumakanan"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
         app:layout_constraintVertical_bias="1.0">
-
 
         <LinearLayout
             android:layout_width="404dp"
             android:layout_height="324dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/textView"
             app:layout_constraintVertical_bias="0.707"
             tools:layout_editor_absoluteX="-31dp">
-
 
             <androidx.cardview.widget.CardView
                 android:layout_width="350dp"
@@ -34,104 +32,34 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginRight="@dimen/cardview_compat_inset_shadow"
                 android:layout_marginBottom="30dp"
+                android:layout_marginTop="15dp"
                 android:elevation="30dp"
                 app:cardBackgroundColor="#5D6FAF"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="20dp">
 
                 <TextView
-
-                    android:layout_width="340dp"
-                    android:layout_height="wrap_content"
-                    android:background="#005D6FAF"
-                    android:gravity="center|top"
-                    android:text="Silahkan transfer total belanjaan ke nomor rekening dibawah ini:"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
-
-                <TextView
-
-                    android:id="@+id/textView"
-                    android:layout_width="340dp"
-                    android:layout_height="184dp"
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
                     android:background="#005D6FAF"
                     android:gravity="center"
-                    android:text="002-002-002-002"
+                    android:text="Bukti Transfer Berhasil Diupload"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
-
-                    android:id="@+id/textView3"
-                    android:layout_width="340dp"
-                    android:layout_height="222dp"
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
                     android:background="#005D6FAF"
                     android:gravity="center"
-                    android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - -"
+                    android:text="Silahkan ambil produk di toko"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
-
-                <TextView
-
-                    android:id="@+id/textView4"
-                    android:layout_width="340dp"
-                    android:layout_height="263dp"
-                    android:background="#005D6FAF"
-                    android:gravity="center"
-                    android:text="Kantong Belanja"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
-
-                <TextView
-
-                    android:id="@+id/nama_barang"
-                    android:layout_width="200dp"
-                    android:layout_height="400dp"
-                    android:background="#005D6FAF"
-                    android:gravity="center"
-                    android:text="NAMA BARANG"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
-
-                <TextView
-
-                    android:id="@+id/harga_barang"
-                    android:layout_width="350dp"
-                    android:layout_height="400dp"
-                    android:background="#005D6FAF"
-                    android:gravity="right|center"
-                    android:text="HARGA BARANG"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
-
-                <Button
-                    android:id="@+id/beli1"
-                    android:layout_width="212dp"
-                    android:layout_height="38dp"
-                    android:layout_gravity="bottom|center"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/judulmakanan"
-                    android:onClick="Bayar"
-                    android:text="Upload Bukti Transfer"
-                    android:textColor="#FFFFFF" />
-
 
             </androidx.cardview.widget.CardView>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="invisible">
-
-            </Button>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="invisible">
-
-            </Button>
-
 
         </LinearLayout>
     </ScrollView>
@@ -170,8 +98,6 @@
         android:text="Pet Medicine"
         android:textColor="#000000"
         android:textSize="30sp"
-
-
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

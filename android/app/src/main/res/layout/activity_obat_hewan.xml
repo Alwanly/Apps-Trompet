@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ObatHewan">
 
 
-    <ScrollView
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_obat_hewan"
         android:layout_width="396dp"
         android:layout_height="368dp"
         android:layout_marginTop="24dp"
@@ -17,172 +17,182 @@
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/judulmenumakanan"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/obat_hewan" />
 
 
-        <LinearLayout
-            android:layout_width="404dp"
-            android:layout_height="324dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView2"
-            app:layout_constraintVertical_bias="0.707"
-            tools:layout_editor_absoluteX="-31dp">
+<!--        <LinearLayout-->
+<!--            android:layout_width="404dp"-->
+<!--            android:layout_height="324dp"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/textView2"-->
+<!--            app:layout_constraintVertical_bias="0.707"-->
+<!--            tools:layout_editor_absoluteX="-31dp">-->
 
 
-            <TextView
-                android:id="@+id/judulsubmakanan"
-                android:layout_width="118dp"
-                android:layout_height="31dp"
-                android:layout_gravity="center"
+<!--            <TextView-->
+<!--                android:id="@+id/judulsubmakanan"-->
+<!--                android:layout_width="118dp"-->
+<!--                android:layout_height="31dp"-->
+<!--                android:layout_gravity="center"-->
 
-                android:layout_marginTop="36dp"
-                android:layout_marginBottom="15dp"
+<!--                android:layout_marginTop="36dp"-->
+<!--                android:layout_marginBottom="15dp"-->
 
-                android:background="@drawable/judulmakanan"
-                android:gravity="center"
-                android:text="@string/vitamin"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold" />
+<!--                android:background="@drawable/judulmakanan"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/vitamin"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:textStyle="bold" />-->
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="361dp"
-                android:layout_height="271dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginEnd="@dimen/cardview_compat_inset_shadow"
-                android:layout_marginRight="@dimen/cardview_compat_inset_shadow"
-                android:layout_marginBottom="60dp"
-                android:elevation="30dp"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="15dp">
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/CardView1"-->
+<!--                android:layout_width="361dp"-->
+<!--                android:layout_height="271dp"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:layout_marginEnd="@dimen/cardview_compat_inset_shadow"-->
+<!--                android:layout_marginRight="@dimen/cardview_compat_inset_shadow"-->
+<!--                android:layout_marginBottom="60dp"-->
+<!--                android:elevation="30dp"-->
+<!--                app:cardCornerRadius="5dp"-->
+<!--                app:cardElevation="15dp">-->
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/vit1" />
+<!--                <ImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:contentDescription="@string/todo"-->
+<!--                    android:src="@drawable/vit1" />-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="177dp"
-                    android:gravity="bottom|center"
-                    android:text="@string/nutri_plus_gel"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
+<!--                <TextView-->
+<!--                    android:id="@+id/nama1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="177dp"-->
+<!--                    android:gravity="bottom|center"-->
+<!--                    android:text="@string/nutri_plus_gel"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:textSize="20sp" />-->
 
-                <TextView
+<!--                <TextView-->
+<!--                    android:id="@+id/harga1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="199dp"-->
+<!--                    android:gravity="bottom|center"-->
+<!--                    android:text="@string/rp_30_000"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:textSize="16sp" />-->
 
-                    android:layout_width="match_parent"
-                    android:layout_height="199dp"
-                    android:gravity="bottom|center"
-                    android:text="@string/rp_30_000"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
-
-                <Button
-                    android:id="@+id/beli1_obat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="31dp"
-                    android:layout_gravity="bottom|center"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/judulmakanan"
-                    android:text="@string/beli"
-                    android:textColor="#FFFFFF" />
-
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="361dp"
-                android:layout_height="271dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="60dp"
-                android:elevation="30dp"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="15dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/vit2" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="196dp"
-                    android:gravity="bottom|center"
-                    android:text="@string/megaderm"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
-
-                <Button
-                    android:id="@+id/beli2_obat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_gravity="bottom|center"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/judulmakanan"
-                    android:text="@string/Beli_Obat"
-                    android:textColor="#FFFFFF" />
-
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="213dp"
-                    android:gravity="bottom|center"
-                    android:text="@string/rp_40_000"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="361dp"
-                android:layout_height="271dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="200dp"
-                android:elevation="30dp"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="10dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/vit3" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="198dp"
-                    android:gravity="bottom|center"
-                    android:text="@string/megaderm_sachet"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
-
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="218dp"
-                    android:gravity="bottom|center"
-                    android:text="@string/rp_35_000"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
-
-                <Button
-                    android:id="@+id/beli3_obat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="29dp"
-                    android:layout_gravity="bottom|center"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/judulmakanan"
-                    android:text="@string/Beli_Obat"
-                    android:textColor="#FFFFFF" />
-            </androidx.cardview.widget.CardView>
+<!--                <Button-->
+<!--                    android:id="@+id/beli1_obat"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="31dp"-->
+<!--                    android:layout_gravity="bottom|center"-->
+<!--                    android:layout_marginBottom="10dp"-->
+<!--                    android:background="@drawable/judulmakanan"-->
+<!--                    android:text="@string/beli"-->
+<!--                    android:textColor="#FFFFFF"-->
+<!--                    android:onClick="beli_obat1" />-->
 
 
-        </LinearLayout>
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/CardView2"-->
+<!--                android:layout_width="361dp"-->
+<!--                android:layout_height="271dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginBottom="60dp"-->
+<!--                android:elevation="30dp"-->
+<!--                app:cardCornerRadius="5dp"-->
+<!--                app:cardElevation="15dp">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:contentDescription="@string/todo"-->
+<!--                    android:src="@drawable/vit2" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/nama2"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="196dp"-->
+<!--                    android:gravity="bottom|center"-->
+<!--                    android:text="@string/megaderm"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:textSize="20sp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/beli2_obat"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_gravity="bottom|center"-->
+<!--                    android:layout_marginBottom="10dp"-->
+<!--                    android:background="@drawable/judulmakanan"-->
+<!--                    android:text="@string/Beli_Obat"-->
+<!--                    android:textColor="#FFFFFF"-->
+<!--                    android:onClick="beli_obat2"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/harga2"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="213dp"-->
+<!--                    android:gravity="bottom|center"-->
+<!--                    android:text="@string/rp_40_000"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:textSize="16sp" />-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/CardView3"-->
+<!--                android:layout_width="361dp"-->
+<!--                android:layout_height="271dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginBottom="200dp"-->
+<!--                android:elevation="30dp"-->
+<!--                app:cardCornerRadius="5dp"-->
+<!--                app:cardElevation="10dp">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:contentDescription="@string/todo"-->
+<!--                    android:src="@drawable/vit3" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/nama3"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="198dp"-->
+<!--                    android:gravity="bottom|center"-->
+<!--                    android:text="@string/megaderm_sachet"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:textSize="20sp" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/harga3"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="218dp"-->
+<!--                    android:gravity="bottom|center"-->
+<!--                    android:text="@string/rp_35_000"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:textSize="16sp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/beli3_obat"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="29dp"-->
+<!--                    android:layout_gravity="bottom|center"-->
+<!--                    android:layout_marginBottom="10dp"-->
+<!--                    android:background="@drawable/judulmakanan"-->
+<!--                    android:text="@string/Beli_Obat"-->
+<!--                    android:textColor="#FFFFFF"-->
+<!--                    android:onClick="beli_obat3"/>-->
+<!--            </androidx.cardview.widget.CardView>-->
 
 
-    </ScrollView>
+<!--        </LinearLayout>-->
+
+
+<!--    </androidx.recyclerview.widget.RecyclerView>-->
 
     <TextView
         android:id="@+id/textView2"
