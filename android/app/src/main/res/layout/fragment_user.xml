@@ -26,18 +26,14 @@
 
 
     <ImageView
+
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/edit_name"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginBottom="23dp"
-        android:src="@drawable/logo_dokter" />
+        android:layout_marginLeft="150dp"
+        android:src="@mipmap/ic_dokter" />
 
     <Button
         android:id="@+id/signOut"

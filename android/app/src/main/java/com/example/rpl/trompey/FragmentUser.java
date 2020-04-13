@@ -14,9 +14,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -42,11 +44,20 @@ public class FragmentUser extends Fragment implements View.OnClickListener {
         v =  lf.inflate(R.layout.fragment_user, container, false);
         mUserView = v.findViewById(R.id.edit_name);
         msignOut = v.findViewById(R.id.signOut);
+        ImageView profil = v.findViewById(R.id.imageView);
+
+
+
 
         msignOut.setOnClickListener(this);
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
-        mUserView.setText(mFirebaseUser.getDisplayName());
+        mUserView.setText(mFirebaseUser.getEmail());
+
+        if (mFirebaseUser.getPhotoUrl() != null ){
+            Glide.with(getActivity()).load(mFirebaseUser.getPhotoUrl()).override(300).into(profil);
+        }
+
         return v;
     }
 

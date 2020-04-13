@@ -33,8 +33,10 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
         TabLayout tabLayout = findViewById(R.id.nav_bot);
-        tabLayout.addTab(tabLayout.newTab().setText("home"));
-        tabLayout.addTab(tabLayout.newTab().setText("user"));
+
+        tabLayout.addTab(tabLayout.newTab().setText("home").setIcon(R.drawable.ic_home_black_24dp));
+
+        tabLayout.addTab(tabLayout.newTab().setText("user").setIcon(R.drawable.ic_person_black_24dp));
 
         final ViewPager viewPager = findViewById(R.id.pager);
         final PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
@@ -43,7 +45,8 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
+                viewPager.setCurrentItem(tab.getPosition(),true);
+
             }
 
             @Override
