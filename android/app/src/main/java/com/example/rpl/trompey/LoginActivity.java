@@ -4,11 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,20 +30,23 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
+    EditText email,password;
     Button btnLogin;
     TextView mtvDaftar;
     GoogleSignInClient mGoogleSignInClient;
     private FirebaseAuth mAuth;
     private static final int RC_SIGN_IN = 101 ;
+    ProgressDialog loading;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         btnLogin = findViewById(R.id.btn_login);
         mtvDaftar = findViewById(R.id.txt_daftar);
+        email = findViewById(R.id.editText_email);
+        password = findViewById(R.id.editText_password);
         mtvDaftar.setOnClickListener(this);
         btnLogin.setOnClickListener(this);
-
         mAuth = FirebaseAuth.getInstance();
         findViewById(R.id.signInButtonImpl).setOnClickListener(this);
     }
@@ -69,6 +75,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            loading.dismiss();
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("Success", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
@@ -76,6 +83,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             finish();
                             startActivity(new Intent(LoginActivity.this,MainActivity.class));
                         } else {
+                            loading.dismiss();
                             // If sign in fails, display a message to the user.
                             Log.w("error", "signInWithCredential:failure", task.getException());
 
@@ -99,12 +107,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_login:
-                Toast.makeText(this,"Login",Toast.LENGTH_SHORT).show();
-                finish();
-                Intent menu = new Intent(this, MainActivity.class);
-                startActivity(menu);
+                loading = ProgressDialog.show(this,null,"Wait...",true,false);
+                login();
                 break;
             case R.id.signInButtonImpl:
+                loading = ProgressDialog.show(this,null,"Wait...",true,false);
                 signIn();
                 break;
             case R.id.txt_daftar:
@@ -114,6 +121,28 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 default:
                     return;
         }
+    }
+
+    private void login() {
+        mAuth.signInWithEmailAndPassword(email.getText().toString(),password.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+
+                if (task.isSuccessful()) {
+                    loading.dismiss();
+                    FirebaseUser user = mAuth.getCurrentUser();
+
+                    Toast.makeText(LoginActivity.this, email.getText().toString(), Toast.LENGTH_SHORT).show();
+                    finish();
+                    Intent menu = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(menu);
+                }
+                else {
+                    loading.dismiss();
+                    Toast.makeText(LoginActivity.this,"Error",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     private void signIn() {

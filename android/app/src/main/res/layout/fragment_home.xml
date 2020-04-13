@@ -162,7 +162,7 @@
                 android:textSize="10sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Grooming"/>
+                android:text="@string/grooming"/>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/menu_medicine"
