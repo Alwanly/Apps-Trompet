@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Trompey</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="vitamin">Vitamin</string>
     <string name="beli">Beli</string>
