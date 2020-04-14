@@ -10,7 +10,8 @@
 
     <color name="judulmakanan">#E95454</color>
 
-
+    <color name="button_edit">#F44336</color>
     <color name="button_daftar">#FFFFFF</color>
     <color name="button_menu">#6982B6</color>
+    <color name="button_logout">#7E7B7B</color>
 </resources>
