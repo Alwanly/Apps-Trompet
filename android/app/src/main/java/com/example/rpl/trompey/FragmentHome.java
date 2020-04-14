@@ -1,12 +1,9 @@
 package com.example.rpl.trompey;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 
+import androidx.fragment.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +35,8 @@ public class FragmentHome extends Fragment implements View.OnClickListener {
                 Toast.makeText(getActivity(),"Doctor",Toast.LENGTH_SHORT).show();
                 break;
                 case R.id.menu_grooming:
+                    Intent gr = new Intent(getActivity(),GroomingActivity.class);
+                    getActivity().startActivity(gr);
                 Toast.makeText(getActivity(),"Grooming",Toast.LENGTH_SHORT).show();
                 break;
                 case R.id.menu_medicine:

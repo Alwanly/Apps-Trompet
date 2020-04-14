@@ -31,13 +31,10 @@ public class DetailsGroomingActivity extends AppCompatActivity {
         tvPaket.setText(paket);
         tvIsi.setText(isi);
         tvHarga.setText(harga);
-
     }
     public void Book(View view) {
         Toast.makeText(this,"Success",Toast.LENGTH_SHORT).show();
         Intent list = new Intent(this,BookGroomingActivity.class);
         startActivity(list);
     }
-
-
 }

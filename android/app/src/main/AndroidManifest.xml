@@ -12,30 +12,23 @@
         <activity android:name=".ObatHewanCheckOut" android:parentActivityName=".ObatHewan" android:theme="@style/ActionBar"></activity>
         <activity android:name=".ObatHewanBayar" android:parentActivityName=".ObatHewan" android:theme="@style/ActionBar" />
         <activity android:name=".ObatHewan" android:parentActivityName=".MainActivity" android:theme="@style/ActionBar" />
-        <activity android:name=".BuktiTransferActivity"></activity>
-        <activity android:name=".PembayaranMakananActivity" />
-        <activity android:name=".MenuMakananActivity" />
-        <activity android:name=".BookGroomingActivity"></activity>
-        <activity android:name=".DetailsGroomingActivity" />
-        <activity android:name=".PaketA" />
-        <activity android:name=".GroomingActivity" />
-        <activity android:name=".Grooming" />
+        <activity android:name=".BuktiTransferActivity" android:theme="@style/ActionBar" android:parentActivityName=".GroomingActivity"></activity>
+        <activity android:name=".PembayaranMakananActivity" android:theme="@style/ActionBar" android:parentActivityName=".MenuMakananActivity" />
+        <activity android:name=".MenuMakananActivity" android:parentActivityName=".MainActivity" android:theme="@style/ActionBar" />
+        <activity android:name=".BookGroomingActivity" android:theme="@style/ActionBar" android:parentActivityName=".GroomingActivity"/>
+        <activity android:name=".DetailsGroomingActivity" android:theme="@style/ActionBar" android:parentActivityName=".GroomingActivity" />
+        <activity android:name=".GroomingActivity" android:parentActivityName=".MainActivity" android:theme="@style/ActionBar" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".RegistrasiActivity"></activity>
         <activity android:name=".MainActivity">
-
-
         </activity>
-
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
 </manifest>

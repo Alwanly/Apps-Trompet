@@ -20,10 +20,7 @@ public class GroomingActivity extends AppCompatActivity implements View.OnClickL
         btn_A.setOnClickListener(this);
         btn_B.setOnClickListener(this);
         btn_C.setOnClickListener(this);
-
-
 }
-
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -49,7 +46,5 @@ public class GroomingActivity extends AppCompatActivity implements View.OnClickL
                 startActivity(C);
                 break;
         }
-
-
     }
 }

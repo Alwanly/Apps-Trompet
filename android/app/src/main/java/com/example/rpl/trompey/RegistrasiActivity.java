@@ -65,9 +65,6 @@ public class RegistrasiActivity extends AppCompatActivity {
             public void onClick(View v) {
                 loading = ProgressDialog.show(mContext,null,"Wait...",true,false);
                 registerUser();
-//                requestRegister();
-
-
             }
         });
     }
@@ -87,45 +84,4 @@ public class RegistrasiActivity extends AppCompatActivity {
                     }
                 });
     }
-
-//    private void requestRegister() {
-//        mApiService.registerRequest(
-//                TextEmail.getText().toString(),
-//                TextPassword.getText().toString(),
-//                TextName.getText().toString().enqueue(new Callback<ResponseBody>() {
-//
-//            @Override
-//            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-//                if (response.isSuccessful()){
-//                    Log.i("debug","onResponse:Successfully");
-//                    loading.dismiss();
-//                    try {
-//                        JSONObject jsonResults = new JSONObject(response.body().string());
-//                        if (jsonResults.getString("status").equals("success")){
-//                            Toast.makeText(mContext,"Success Registration",Toast.LENGTH_SHORT).show();
-//                            startActivity(new Intent(mContext,MainActivity.class));
-//                        }else{
-//                            String error_message = jsonResults.getString("errors");
-//                            Toast.makeText(mContext, error_message, Toast.LENGTH_SHORT).show();
-//                        }
-//                    } catch (JSONException e) {
-//                        e.printStackTrace();
-//                    } catch (IOException e) {
-//                        e.printStackTrace();
-//                    }
-//                }else{
-//                    Log.i("Debug","onResponse:Decline");
-//                    loading.dismiss();
-//                }
-//
-//            }
-//
-//            @Override
-//            public void onFailure(Call<ResponseBody> call, Throwable t) {
-//                Log.i("debug","onFailure:Error->"+t.getMessage());
-//                Toast.makeText(mContext,"Can't Connection Internet", Toast.LENGTH_SHORT).show();
-//                loading.dismiss();
-//            }
-//        }));
-//    }
 }
