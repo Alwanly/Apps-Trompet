@@ -26,22 +26,26 @@ import com.google.firebase.auth.FirebaseUser;
 public class FragmentUser extends Fragment implements View.OnClickListener {
     FirebaseAuth mFirebaseAuth;
     FirebaseUser mFirebaseUser;
-    EditText mUserView;
+    EditText mUserView,mDisplay,mphone;
     Button msignOut;
 
     private  View v;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         LayoutInflater lf = getActivity().getLayoutInflater();
         v =  lf.inflate(R.layout.fragment_user, container, false);
-        mUserView = v.findViewById(R.id.edit_name);
-        msignOut = v.findViewById(R.id.signOut);
-        ImageView profil = v.findViewById(R.id.imageView);
+        mUserView = v.findViewById(R.id.editText);
+        mDisplay = v.findViewById(R.id.editText2);
+        mphone = v.findViewById(R.id.editText3);
+        msignOut = v.findViewById(R.id.button3);
+        ImageView profil = v.findViewById(R.id.imageView2);
 
         msignOut.setOnClickListener(this);
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
-        mUserView.setText(mFirebaseUser.getEmail());
 
+        mUserView.setText(mFirebaseUser.getEmail());
+        mDisplay.setText(mFirebaseUser.getDisplayName());
+        mphone.setText(mFirebaseUser.getPhoneNumber());
         if (mFirebaseUser.getPhotoUrl() != null ){
             Glide.with(getActivity()).load(mFirebaseUser.getPhotoUrl()).override(300).into(profil);
         }
@@ -52,7 +56,7 @@ public class FragmentUser extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
        switch (v.getId()){
-           case R.id.signOut:
+           case R.id.button3:
                signOut();
                break;
        }
