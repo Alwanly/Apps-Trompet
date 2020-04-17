@@ -52,6 +52,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "126482966218-ic96opnbdcaed0gatoq65sd7j6q77u82.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rpl.trompey",
+            "certificate_hash": "fad6d7153f6b40c568f1667eb23b3dab846d3e8a"
+          }
+        },
+        {
           "client_id": "126482966218-be94126glrjlee1bl3j3k0np4vt73udn.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

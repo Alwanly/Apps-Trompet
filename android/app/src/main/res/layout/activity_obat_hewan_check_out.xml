@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ObatHewanBayar">
+    tools:context=".ObatHewanBayar"
+    android:background="@drawable/bgapps">
 
 
     <ScrollView
 
         android:layout_width="398dp"
-        android:layout_height="377dp"
+        android:layout_height="310dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +29,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="350dp"
-                android:layout_height="350dp"
+                android:layout_height="250dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginRight="@dimen/cardview_compat_inset_shadow"
                 android:layout_marginBottom="30dp"
@@ -38,26 +39,41 @@
                 app:cardCornerRadius="10dp"
                 app:cardElevation="20dp">
 
-                <TextView
-                    android:id="@+id/textView1"
-                    android:layout_width="match_parent"
-                    android:layout_height="250dp"
-                    android:background="#005D6FAF"
-                    android:gravity="center"
-                    android:text="Bukti Transfer Berhasil Diupload"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="300dp"
+
+                    android:id="@+id/textView"
+                    android:layout_width="340dp"
+                    android:layout_height="184dp"
                     android:background="#005D6FAF"
                     android:gravity="center"
-                    android:text="Silahkan ambil produk di toko"
+                    android:text="@string/transfer"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
+
+                <TextView
+
+                    android:id="@+id/textView3"
+                    android:layout_width="340dp"
+                    android:layout_height="222dp"
+                    android:background="#005D6FAF"
+                    android:gravity="center"
+                    android:text="@string/garis"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <TextView
+
+                    android:id="@+id/textView4"
+                    android:layout_width="340dp"
+                    android:layout_height="263dp"
+                    android:background="#005D6FAF"
+                    android:gravity="center"
+                    android:text="@string/transfer2"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+
 
             </androidx.cardview.widget.CardView>
 
@@ -68,7 +84,6 @@
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="221dp"
-        android:background="#5D6FAF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.606"
@@ -92,7 +107,7 @@
         android:id="@+id/judulmenumakanan"
         android:layout_width="386dp"
         android:layout_height="151dp"
-        android:background="@drawable/rounded"
+        android:background="@drawable/rounded_1"
         android:elevation="20dp"
         android:gravity="center"
         android:text="Pet Medicine"

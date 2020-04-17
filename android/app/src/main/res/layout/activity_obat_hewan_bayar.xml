@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ObatHewanBayar">
+    tools:context=".ObatHewanBayar"
+    android:background="@drawable/bgapps">
 
 
     <ScrollView
 
         android:layout_width="398dp"
-        android:layout_height="377dp"
+        android:layout_height="310dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -140,7 +141,6 @@
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="221dp"
-        android:background="#5D6FAF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.606"
@@ -164,7 +164,7 @@
         android:id="@+id/judulmenumakanan"
         android:layout_width="386dp"
         android:layout_height="151dp"
-        android:background="@drawable/rounded"
+        android:background="@drawable/rounded_1"
         android:elevation="20dp"
         android:gravity="center"
         android:text="Pet Medicine"

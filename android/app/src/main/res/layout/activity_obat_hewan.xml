@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ObatHewan">
+    tools:context=".ObatHewan"
+    android:background="@drawable/bgapps">
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -20,23 +21,12 @@
         app:layout_constraintTop_toBottomOf="@+id/judulmenumakanan"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="221dp"
-        android:background="#5D6FAF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.606"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+
 
     <ImageView
         android:id="@+id/logomenumakanan"
-        android:layout_width="269dp"
-        android:layout_height="125dp"
-
+        android:layout_width="407dp"
+        android:layout_height="178dp"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@+id/textView2"
@@ -49,6 +39,7 @@
         android:id="@+id/judulmenumakanan"
         android:layout_width="386dp"
         android:layout_height="151dp"
+        android:layout_marginBottom="432dp"
         android:background="@drawable/rounded_1"
         android:elevation="20dp"
         android:gravity="center"
@@ -56,12 +47,12 @@
         android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"
-
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logomenumakanan"
-        app:layout_constraintVertical_bias="0.0" />
-
+        app:layout_constraintTop_toTopOf="@+id/logomenumakanan"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
