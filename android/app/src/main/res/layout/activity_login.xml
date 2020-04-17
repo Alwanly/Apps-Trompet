@@ -39,7 +39,6 @@
         android:layout_width="262dp"
         android:layout_height="36dp"
         android:background="@drawable/rounded_button"
-        android:onClick="pindah"
         android:text="Login"
         android:textColor="#8A97DD"
         app:layout_constraintBottom_toBottomOf="parent"

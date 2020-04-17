@@ -14,7 +14,6 @@
         <item>Me-o Cat Food</item>
         <item>Cleo Cat Food</item>
         <item>Maxi Cat Food</item>
-
     </string-array>
 
     <string-array name="profile_pics">
@@ -51,7 +50,6 @@
         <item>Rp. 40000</item>
         <item>Rp. 40000</item>
         <item>Rp. 40000</item>
-
     </string-array>
 
     <string-array name="contact_type">
@@ -60,6 +58,7 @@
         <item></item>
         <item></item>
     </string-array>
+
 
     <string name="A">A</string>
     <string name="B">B</string>
@@ -71,4 +70,13 @@
     <string name="Paket">Paket</string>
     <string name="Isi">Isi</string>
     <string name="Harga">Harga</string>
+    <string name="admin">admin</string>
+    <string name="grooming">Grooming</string>
+    <string name="dokter">Dokter</string>
+    <string name="medicine">Medicine</string>
+    <string name="email">Email</string>
+    <string name="status">status</string>
+    <string name="tolak">Tolak</string>
+    <string name="terima">Terima</string>
+    <string name="address">Address</string>
 </resources>

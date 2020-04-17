@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -53,7 +54,8 @@ public class ObatAdapter extends RecyclerView.Adapter<ObatAdapter.ViewHolder> {
             gambar = itemView.findViewById(R.id.gambar);
             nama = itemView.findViewById(R.id.nama);
             harga = itemView.findViewById(R.id.harga);
-            itemView.setOnClickListener(this);
+            Button btn = itemView.findViewById(R.id.btn_beli);
+            btn.setOnClickListener(this);
         }
 
         public void bindTo (Obat obat){

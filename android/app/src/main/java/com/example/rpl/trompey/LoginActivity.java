@@ -27,6 +27,14 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.HashMap;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -79,9 +87,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("Success", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(LoginActivity.this,user.getEmail(),Toast.LENGTH_SHORT).show();
-                            finish();
-                            startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                            Authentication(user.getUid());
                         } else {
                             loading.dismiss();
                             // If sign in fails, display a message to the user.
@@ -96,10 +102,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onStart() {
         super.onStart();
 
-        if (mAuth.getCurrentUser() != null){
-            finish();
-            startActivity(new Intent(this,MainActivity.class));
-        }
+//        if (mAuth.getCurrentUser() != null){
+//            finish();
+//            startActivity(new Intent(this,MainActivity.class));
+//        }
 
     }
 
@@ -124,25 +130,28 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void login() {
-        mAuth.signInWithEmailAndPassword(email.getText().toString(),password.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
 
-                if (task.isSuccessful()) {
-                    loading.dismiss();
-                    FirebaseUser user = mAuth.getCurrentUser();
+        if (email.getText().toString().equals("admin@admin.com")){
+            Intent admin = new Intent(this,MenuAdminActivity.class);
+            startActivity(admin);
+            finish();
+            loading.dismiss();
+        }else {
+            mAuth.signInWithEmailAndPassword(email.getText().toString(), password.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
 
-                    Toast.makeText(LoginActivity.this, email.getText().toString(), Toast.LENGTH_SHORT).show();
-                    finish();
-                    Intent menu = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(menu);
+                    if (task.isSuccessful()) {
+                        loading.dismiss();
+                        FirebaseUser user = mAuth.getCurrentUser();
+                        Authentication(user.getUid());
+                    } else {
+                        loading.dismiss();
+                        Toast.makeText(LoginActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                    }
                 }
-                else {
-                    loading.dismiss();
-                    Toast.makeText(LoginActivity.this,"Error",Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+            });
+        }
     }
 
     private void signIn() {
@@ -153,5 +162,27 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mGoogleSignInClient = GoogleSignIn.getClient(this,gso);
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
+    }
+
+    private void Authentication(String uid){
+
+        DatabaseReference db = FirebaseDatabase.getInstance().getReference("Users");
+
+        Query query = db.equalTo(uid);
+
+        query.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Toast.makeText(LoginActivity.this, "Success", Toast.LENGTH_SHORT).show();
+                Intent login = new Intent(LoginActivity.this,MainActivity.class);
+                startActivity(login);
+                finish();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(LoginActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

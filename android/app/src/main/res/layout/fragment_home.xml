@@ -113,7 +113,7 @@
             android:textSize="10sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Doctor"/>
+            android:text="@string/dokter"/>
     </LinearLayout>
         <LinearLayout
             android:layout_margin="5dp"
@@ -132,7 +132,7 @@
                 android:textSize="10sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Pet Food"/>
+                android:text="@string/pet_food"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -162,7 +162,7 @@
                 android:textSize="10sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Grooming"/>
+                android:text="@string/grooming"/>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/menu_medicine"
@@ -181,7 +181,7 @@
                 android:textSize="10sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Medicine"/>
+                android:text="@string/medicine"/>
         </LinearLayout>
     </LinearLayout>
 
