@@ -45,7 +45,7 @@ public class FragmentHome extends Fragment implements View.OnClickListener {
                 Toast.makeText(getActivity(),"Medicice",Toast.LENGTH_SHORT).show();
                 break;
                 case R.id.menu_pet_food:
-                    Intent food = new Intent(getActivity(),MenuMakananActivity.class);
+                    Intent food = new Intent(getActivity(), MakananHewan.class);
                     getActivity().startActivity(food);
                 Toast.makeText(getActivity(),"Pet Food",Toast.LENGTH_SHORT).show();
                 break;

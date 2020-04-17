@@ -13,8 +13,8 @@
         <activity android:name=".ObatHewanBayar" android:parentActivityName=".ObatHewan" android:theme="@style/ActionBar" />
         <activity android:name=".ObatHewan" android:parentActivityName=".MainActivity" android:theme="@style/ActionBar" />
         <activity android:name=".BuktiTransferActivity" android:theme="@style/ActionBar" android:parentActivityName=".GroomingActivity"></activity>
-        <activity android:name=".PembayaranMakananActivity" android:theme="@style/ActionBar" android:parentActivityName=".MenuMakananActivity" />
-        <activity android:name=".MenuMakananActivity" android:parentActivityName=".MainActivity" android:theme="@style/ActionBar" />
+        <activity android:name=".MakananBayar" android:theme="@style/ActionBar" android:parentActivityName=".MakananHewan" />
+        <activity android:name=".MakananHewan" android:parentActivityName=".MainActivity" android:theme="@style/ActionBar" />
         <activity android:name=".BookGroomingActivity" android:theme="@style/ActionBar" android:parentActivityName=".GroomingActivity"/>
         <activity android:name=".DetailsGroomingActivity" android:theme="@style/ActionBar" android:parentActivityName=".GroomingActivity" />
         <activity android:name=".GroomingActivity" android:parentActivityName=".MainActivity" android:theme="@style/ActionBar" />

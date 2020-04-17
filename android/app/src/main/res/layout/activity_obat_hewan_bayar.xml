@@ -101,6 +101,7 @@
                     android:layout_height="400dp"
                     android:background="#005D6FAF"
                     android:gravity="right|center"
+                    android:layout_marginLeft="-20dp"
                     android:text="HARGA BARANG"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
@@ -110,6 +111,7 @@
                     android:layout_width="212dp"
                     android:layout_height="38dp"
                     android:layout_gravity="bottom|center"
+                    android:layout_marginLeft="-20dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/judulmakanan"
                     android:onClick="Bayar"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".MakananBayar"
     android:background="@drawable/bgapps">
 
 
@@ -116,6 +116,30 @@
                     android:background="#005D6FAF"
                     android:gravity="center"
                     android:text="Kantong Belanja"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <TextView
+
+                    android:id="@+id/judulmakan"
+                    android:layout_width="200dp"
+                    android:layout_height="400dp"
+                    android:background="#005D6FAF"
+                    android:gravity="center"
+                    android:layout_marginLeft="-20dp"
+                    android:text="NAMA BARANG"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <TextView
+
+                    android:id="@+id/hargamakan"
+                    android:layout_width="350dp"
+                    android:layout_height="400dp"
+                    android:layout_marginLeft="-20dp"
+                    android:background="#005D6FAF"
+                    android:gravity="right|center"
+                    android:text="HARGA BARANG"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
 
