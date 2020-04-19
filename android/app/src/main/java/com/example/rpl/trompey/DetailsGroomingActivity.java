@@ -8,11 +8,16 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+
 public class DetailsGroomingActivity extends AppCompatActivity {
     String paket,isi,harga;
-
-    private String context;
-
+    DatabaseReference myRef;
+    FirebaseAuth Auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,10 +36,26 @@ public class DetailsGroomingActivity extends AppCompatActivity {
         tvPaket.setText(paket);
         tvIsi.setText(isi);
         tvHarga.setText(harga);
+
+        Auth = FirebaseAuth.getInstance();
+        myRef = FirebaseDatabase.getInstance().getReference("Data Paket Grooming");
     }
     public void Book(View view) {
-        Toast.makeText(this,"Success",Toast.LENGTH_SHORT).show();
-        Intent list = new Intent(this,BookGroomingActivity.class);
-        startActivity(list);
+        String id = myRef.push().getKey();
+        String email = Auth.getCurrentUser().getEmail();
+
+        HashMap<Object, String> datapaketgrooming = new HashMap<>();
+        datapaketgrooming.put("id", id);
+        datapaketgrooming.put("email", email);
+        datapaketgrooming.put("paket", paket);
+        datapaketgrooming.put("isi", isi);
+        datapaketgrooming.put("harga", harga);
+
+        myRef.child(id).setValue(datapaketgrooming);
+
+        Toast.makeText(this, "Succes",Toast.LENGTH_SHORT).show();
+        Intent book = new Intent(this,BookGroomingActivity.class);
+        startActivity(book);
+
     }
 }
