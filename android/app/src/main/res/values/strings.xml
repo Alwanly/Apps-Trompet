@@ -53,13 +53,13 @@
         <item>Rp. 40000</item>
 
     </string-array>
-
     <string-array name="contact_type">
         <item></item>
         <item></item>
         <item></item>
         <item></item>
     </string-array>
+
 
     <string name="A">A</string>
     <string name="B">B</string>
@@ -71,4 +71,7 @@
     <string name="Paket">Paket</string>
     <string name="Isi">Isi</string>
     <string name="Harga">Harga</string>
+    <string name="iklanHome">Punya peliharaan bingung ngurus-nya? Pakai TROMPET saja!</string>
+    <string name="button_history">History Obat</string>
+    <string name="history_obat">Pet Medicine</string>
 </resources>

@@ -1,9 +1,11 @@
 package com.example.rpl.trompey;
 
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -51,5 +53,9 @@ public class ObatHewan extends AppCompatActivity {
         }
         gambar.recycle();
         mAdapter.notifyDataSetChanged();
+    }
+
+    public void history(View view) {
+        startActivity(new Intent(this, ObatHewanHistory.class));
     }
 }

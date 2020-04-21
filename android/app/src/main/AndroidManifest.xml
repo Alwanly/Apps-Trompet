@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.rpl.trompey">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,25 +11,54 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ObatHewanCheckOut" android:parentActivityName=".ObatHewan" android:theme="@style/ActionBar"></activity>
-        <activity android:name=".ObatHewanBayar" android:parentActivityName=".ObatHewan" android:theme="@style/ActionBar" />
-        <activity android:name=".ObatHewan" android:parentActivityName=".MainActivity" android:theme="@style/ActionBar" />
-        <activity android:name=".BuktiTransferActivity" android:theme="@style/ActionBar" android:parentActivityName=".GroomingActivity"></activity>
-        <activity android:name=".PembayaranMakananActivity" android:theme="@style/ActionBar" android:parentActivityName=".MenuMakananActivity" />
-        <activity android:name=".MenuMakananActivity" android:parentActivityName=".MainActivity" android:theme="@style/ActionBar" />
-        <activity android:name=".BookGroomingActivity" android:theme="@style/ActionBar" android:parentActivityName=".GroomingActivity"/>
-        <activity android:name=".DetailsGroomingActivity" android:theme="@style/ActionBar" android:parentActivityName=".GroomingActivity" />
-        <activity android:name=".GroomingActivity" android:parentActivityName=".MainActivity" android:theme="@style/ActionBar" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ObatHewanHistory"></activity>
+        <activity
+            android:name=".ObatHewanCheckOut"
+            android:parentActivityName=".ObatHewan"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".ObatHewanBayar"
+            android:parentActivityName=".ObatHewan"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".ObatHewan"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".BuktiTransferActivity"
+            android:parentActivityName=".GroomingActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".PembayaranMakananActivity"
+            android:parentActivityName=".MenuMakananActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".MenuMakananActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".BookGroomingActivity"
+            android:parentActivityName=".GroomingActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".DetailsGroomingActivity"
+            android:parentActivityName=".GroomingActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".GroomingActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/ActionBar" />
+        <activity android:name=".ProfileActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistrasiActivity"></activity>
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".RegistrasiActivity" />
+        <activity android:name=".MainActivity"></activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
