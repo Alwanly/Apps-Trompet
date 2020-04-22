@@ -55,7 +55,6 @@
     </string-array>
 
 
-
     <string name="A">A</string>
     <string name="B">B</string>
     <string name="C">C</string>
@@ -67,4 +66,5 @@
     <string name="Isi">Isi</string>
     <string name="Harga">Harga</string>
     <string name="iklanHome">Punya peliharaan bingung ngurus-nya? Pakai TROMPET saja!</string>
+    <string name="historymakanan">History Makanan</string>
 </resources>

@@ -59,6 +59,11 @@ public class MakananHewan extends AppCompatActivity implements AdapterView.OnIte
     public void onPointerCaptureChanged(boolean hasCapture) {
 
     }
+
+    public void historymakan(View view) {
+        Intent upload = new Intent(MakananHewan.this, MakananHewanHistory.class);
+        startActivity(upload);
+    }
 }
 
 
