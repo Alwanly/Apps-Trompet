@@ -8,16 +8,20 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class DetailsGroomingActivity extends AppCompatActivity {
-    String paket,isi,harga;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
-    private String context;
+import java.util.HashMap;
+
+public class GroomingDetailsActivity extends AppCompatActivity {
+    String paket,isi,harga;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details_grooming);
-
+        setTitle("Details Grooming");
         Intent intent = getIntent();
 
         TextView tvPaket = findViewById(R.id.tv_paket);
@@ -31,14 +35,15 @@ public class DetailsGroomingActivity extends AppCompatActivity {
         tvPaket.setText(paket);
         tvIsi.setText(isi);
         tvHarga.setText(harga);
+
+
     }
     public void Book(View view) {
+        Intent book = new Intent(this, GroomingMetodePembayaranActivity.class);
+        book.putExtra("PAKET", paket);
+        book.putExtra("ISI",isi);
+        book.putExtra("HARGA",harga);
+        startActivity(book);
 
-
-
-
-        Toast.makeText(this,"Success",Toast.LENGTH_SHORT).show();
-        Intent list = new Intent(this,BookGroomingActivity.class);
-        startActivity(list);
     }
 }

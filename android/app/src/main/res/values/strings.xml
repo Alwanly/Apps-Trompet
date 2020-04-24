@@ -76,6 +76,10 @@
     <string name="Paket">Paket</string>
     <string name="Isi">Isi</string>
     <string name="Harga">Harga</string>
+    <string name="bayar_dan_pesan">Bayar dan Pesan</string>
+    <string name="cash_on_delivery">Cash On Delivery</string>
+    <string name="transfer_bank">Transfer Bank</string>
+    <string name="gopayy">Gopay</string>
     <string name="iklanHome">Punya peliharaan bingung ngurus-nya? Pakai TROMPET saja!</string>
     <string name="historymakanan">History Makanan</string>
     <string name="emptyEmail">email kosong</string>

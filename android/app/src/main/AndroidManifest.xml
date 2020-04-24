@@ -12,6 +12,21 @@
         <activity android:name=".MakananHewanDetail"></activity>
         <activity android:name=".MakananHewanHistory" />
         <activity
+            android:name=".MakananBayar"
+            android:parentActivityName=".MakananHewan"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".MakananHewan"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".GroomingActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/ActionBar" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".GroomingMetodePembayaranActivity"></activity>
+        <activity android:name=".GroomingHistoryActivity" />
+        <activity
             android:name=".ObatHewanCheckOut"
             android:parentActivityName=".ObatHewan"
             android:theme="@style/ActionBar" />
@@ -28,26 +43,21 @@
             android:parentActivityName=".GroomingActivity"
             android:theme="@style/ActionBar" />
         <activity
-            android:name=".MakananBayar"
-            android:parentActivityName=".MakananHewan"
+            android:name=".PembayaranMakananActivity"
+            android:parentActivityName=".MenuMakananActivity"
             android:theme="@style/ActionBar" />
         <activity
-            android:name=".MakananHewan"
+            android:name=".MenuMakananActivity"
             android:parentActivityName=".MainActivity"
             android:theme="@style/ActionBar" />
         <activity
-            android:name=".BookGroomingActivity"
+            android:name=".GroomingBookActivity"
             android:parentActivityName=".GroomingActivity"
             android:theme="@style/ActionBar" />
         <activity
-            android:name=".DetailsGroomingActivity"
+            android:name=".GroomingDetailsActivity"
             android:parentActivityName=".GroomingActivity"
             android:theme="@style/ActionBar" />
-        <activity
-            android:name=".GroomingActivity"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/ActionBar" />
-        <activity android:name=".ProfileActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -62,7 +72,4 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
-
-
 </manifest>
