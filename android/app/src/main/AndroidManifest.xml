@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ObatHewanHistory"></activity>
+        <activity android:name=".ObatHewanDetail"></activity>
+        <activity android:name=".ObatHewanHistory" />
         <activity
             android:name=".ObatHewanCheckOut"
             android:parentActivityName=".ObatHewan"
@@ -57,7 +58,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegistrasiActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

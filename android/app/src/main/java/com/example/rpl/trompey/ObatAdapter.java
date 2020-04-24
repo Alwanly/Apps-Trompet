@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -47,12 +48,24 @@ public class ObatAdapter extends RecyclerView.Adapter<ObatAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView nama,harga;
         ImageView gambar;
+        Button beli;
 
         public ViewHolder(View itemView) {
             super(itemView);
             gambar = itemView.findViewById(R.id.gambar);
             nama = itemView.findViewById(R.id.nama);
             harga = itemView.findViewById(R.id.harga);
+            beli = itemView.findViewById(R.id.btn_beli);
+            beli.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Obat currentObat = obatlist.get(getAdapterPosition());
+                    Intent detailIntent = new Intent(mContext, ObatHewanBayar.class);
+                    detailIntent.putExtra("nama", currentObat.getNama());
+                    detailIntent.putExtra("harga", currentObat.getHarga());
+                    mContext.startActivity(detailIntent);
+                }
+            });
             itemView.setOnClickListener(this);
         }
 
@@ -67,11 +80,15 @@ public class ObatAdapter extends RecyclerView.Adapter<ObatAdapter.ViewHolder> {
         @Override
         public void onClick(View view) {
             Obat currentObat = obatlist.get(getAdapterPosition());
-            Intent detailIntent = new Intent(mContext, ObatHewanBayar.class);
+            Intent detailIntent = new Intent(mContext, ObatHewanDetail.class);
             detailIntent.putExtra("nama", currentObat.getNama());
             detailIntent.putExtra("harga", currentObat.getHarga());
+            detailIntent.putExtra("gambar", currentObat.getGambar());
+            detailIntent.putExtra("deskripsi", currentObat.getDeskripsi());
             mContext.startActivity(detailIntent);
         }
+
+
     }
 
 }

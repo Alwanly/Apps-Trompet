@@ -1,17 +1,21 @@
 package com.example.rpl.trompey;
 
 import android.content.Intent;
-import android.content.res.TypedArray;
-import android.database.Cursor;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -20,6 +24,8 @@ public class ObatHewan extends AppCompatActivity {
     private RecyclerView rvObatHewan;
     private ArrayList<Obat> obatlist;
     private ObatAdapter mAdapter;
+    private DatabaseReference myRef;
+    private FirebaseAuth Auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +33,9 @@ public class ObatHewan extends AppCompatActivity {
         setContentView(R.layout.activity_obat_hewan);
 
         setTitle("List Obat Hewan");
+
+        Auth = FirebaseAuth.getInstance();
+        myRef = FirebaseDatabase.getInstance().getReference("List Data Obat");
 
         rvObatHewan = findViewById(R.id.rv_obat_hewan);
 
@@ -40,22 +49,52 @@ public class ObatHewan extends AppCompatActivity {
     }
 
     private void getDataObat() {
-        String[] nama = getResources().getStringArray(R.array.nama_obat);
-        String[] harga = getResources().getStringArray(R.array.harga_obat);
-        TypedArray gambar = getResources().obtainTypedArray(R.array.gambar_obat);
+//        String[] nama = getResources().getStringArray(R.array.nama_obat);
+//        String[] harga = getResources().getStringArray(R.array.harga_obat);
+//        TypedArray gambar = getResources().obtainTypedArray(R.array.gambar_obat);
+//
+//        final String email = Auth.getCurrentUser().getEmail();
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot DS : dataSnapshot.getChildren()){
+                    String nama = DS.child("nama").getValue().toString();
+                    String harga = DS.child("harga").getValue().toString();
+                    String gambar = DS.child("gambar").getValue().toString();
+                    String deskripsi = DS.child("desc").getValue().toString();
 
+                    Obat OH = new Obat(nama, harga, gambar, deskripsi);
 
-        obatlist.clear();
+                    obatlist.add(OH);
+                }
+                mAdapter.notifyDataSetChanged();
+            }
 
-        for (int i = 0; i < nama.length; i++) {
-            obatlist.add(new Obat(nama[i], harga[i],
-                    gambar.getResourceId(i, 0)));
-        }
-        gambar.recycle();
-        mAdapter.notifyDataSetChanged();
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                showMessage("error", databaseError.getMessage());
+            }
+        });
+//
+//        obatlist.clear();
+//
+//        for (int i = 0; i < nama.length; i++) {
+//            obatlist.add(new Obat(nama[i], harga[i],
+//                    gambar.getResourceId(i, 0)));
+//        }
+//        gambar.recycle();
+//        mAdapter.notifyDataSetChanged();
     }
 
     public void history(View view) {
         startActivity(new Intent(this, ObatHewanHistory.class));
+    }
+
+    public void showMessage(String title, String Message){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(Message);
+        builder.show();
     }
 }

@@ -63,9 +63,6 @@ public class ObatHewanHistory extends AppCompatActivity {
 
                         ObatHistory OH = new ObatHistory(nama, harga);
 
-                        Toast.makeText(ObatHewanHistory.this, nama, Toast.LENGTH_SHORT).show();
-                        Toast.makeText(ObatHewanHistory.this, harga, Toast.LENGTH_SHORT).show();
-
                         history.add(OH);
                     }
                 }
