@@ -52,6 +52,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "126482966218-fkk54up4q4s56ru3ih6809va6usar511.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rpl.trompey",
+            "certificate_hash": "7b47e9d62ca788f62a4f4a8dbd1cc47fe6f9632e"
+          }
+        },
+        {
+          "client_id": "126482966218-ic96opnbdcaed0gatoq65sd7j6q77u82.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rpl.trompey",
+            "certificate_hash": "fad6d7153f6b40c568f1667eb23b3dab846d3e8a"
+          }
+        },
+        {
           "client_id": "126482966218-be94126glrjlee1bl3j3k0np4vt73udn.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
