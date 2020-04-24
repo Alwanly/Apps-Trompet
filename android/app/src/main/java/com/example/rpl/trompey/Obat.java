@@ -3,7 +3,19 @@ package com.example.rpl.trompey;
 import android.graphics.drawable.Drawable;
 
 public class Obat {
+    String id;
     private String nama, harga, gambar, deskripsi;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Obat() {
+    }
 
     public Obat(String nama, String harga, String gambar, String deskripsi) {
         this.nama = nama;

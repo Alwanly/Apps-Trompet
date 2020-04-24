@@ -72,7 +72,7 @@ public class AddObatHewan extends AppCompatActivity {
                 if (!isValidData(nama,harga,des,obat))return;
                 ob.setNama(nama);
                 ob.setHarga(harga);
-                ob.setDesc(des);
+                ob.setDeskripsi(des);
                 try {
                     uploadFirebase();
                 } catch (Exception e) {

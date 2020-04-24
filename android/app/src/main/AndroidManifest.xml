@@ -9,6 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AddObatHewan" android:parentActivityName=".ListAdminObat" android:theme="@style/ActionBar"/>
+        <activity android:name=".MenuAdminActivity"/>
+        <activity android:name=".ListAdminObat" android:parentActivityName=".MenuAdminActivity" android:theme="@style/ActionBar"/>
+        <activity android:name=".ListAdminActivity" android:parentActivityName=".MenuAdminActivity" android:theme="@style/ActionBar"/>
+        <activity android:name=".ListAdminAccept" android:parentActivityName=".MenuAdminActivity" android:theme="@style/ActionBar"/>
+        <activity android:name=".ListAdminDecline" android:theme="@style/ActionBar" android:parentActivityName=".MenuAdminActivity"/>
+        <activity android:name=".AdminDetailsActivity" android:parentActivityName=".ListAdminActivity" android:theme="@style/ActionBar"/>
+
         <activity android:name=".ObatHewanDetail"></activity>
         <activity android:name=".ObatHewanHistory" />
         <activity
@@ -26,14 +34,6 @@
         <activity
             android:name=".BuktiTransferActivity"
             android:parentActivityName=".GroomingActivity"
-            android:theme="@style/ActionBar" />
-        <activity
-            android:name=".PembayaranMakananActivity"
-            android:parentActivityName=".MenuMakananActivity"
-            android:theme="@style/ActionBar" />
-        <activity
-            android:name=".MenuMakananActivity"
-            android:parentActivityName=".MainActivity"
             android:theme="@style/ActionBar" />
         <activity
             android:name=".GroomingActivity"

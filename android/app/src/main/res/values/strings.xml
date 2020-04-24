@@ -121,5 +121,16 @@
     <string name="detail_dokter">Detail</string>
     <string name="doctor_history">Doctor History</string>
     <string name="history_dokter">History</string>
+    <string name="tambah_obat">Tambah Obat</string>
+    <string name="nama_obat">Nama Obat</string>
+    <string name="tolak">Decline</string>
+    <string name="email">Email</string>
+    <string name="terima">Accept</string>
+    <string name="admin">Admin</string>
+    <string name="grooming">List User Grooming</string>
+    <string name="list_accept">List Accept Grooming</string>
+    <string name="list_decline">List Decline Grooming</string>
+    <string name="address">Address</string>
+    <string name="status">Status</string>
 
 </resources>

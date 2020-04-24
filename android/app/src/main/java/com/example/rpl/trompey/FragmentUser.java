@@ -100,25 +100,24 @@ public class FragmentUser extends Fragment implements View.OnClickListener {
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
+                String imageProfile ="";
                 for (DataSnapshot ds : dataSnapshot.getChildren()){
 
                     String name = ds.child("name").getValue().toString();
                     String email = ds.child("email").getValue().toString();
                     String phone = ds.child("phone").getValue().toString();
                     String address = ds.child("address").getValue().toString();
-                    String imageProfile = ds.child("imageProfile").getValue().toString();
+                    imageProfile = ds.child("imageProfile").getValue().toString();
                     mName.setText(name);
                     mEmail.setText(email);
                     mphone.setText(phone);
                     maddress.setText(address);
-
-                    if (imageProfile.equals("")){
-                        Glide.with(getActivity()).load(R.drawable.cowo).into(profile);
-                    }else {
-                        setImage(imageProfile);
-                        Glide.with(getActivity()).load(imageProfile).into(profile);
-                    }
+                }
+                if (imageProfile.equals("")){
+                    Glide.with(getActivity()).load(R.drawable.cowo).into(profile);
+                }else {
+                    setImage(imageProfile);
+                    Glide.with(getActivity()).load(imageProfile).into(profile);
                 }
             }
             @Override

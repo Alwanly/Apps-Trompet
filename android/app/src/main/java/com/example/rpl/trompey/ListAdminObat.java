@@ -64,13 +64,13 @@ public class ListAdminObat extends AppCompatActivity {
                     String id = ds.child("id").getValue().toString();
                     String name = ds.child("nama").getValue().toString();
                     String harga = ds.child("harga").getValue().toString();
-                    String desc = ds.child("desc").getValue().toString();
+                    String desc = ds.child("deskripsi").getValue().toString();
                     String img = ds.child("gambar").getValue().toString();
 
                     ob.setId(id);
                     ob.setNama(name);
                     ob.setHarga(harga);
-                    ob.setDesc(desc);
+                    ob.setDeskripsi(desc);
                     ob.setGambar(img);
                     adminArrayList.add(ob);
                 }

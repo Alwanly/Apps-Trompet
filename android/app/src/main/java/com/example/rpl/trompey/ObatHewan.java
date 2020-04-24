@@ -49,11 +49,7 @@ public class ObatHewan extends AppCompatActivity {
     }
 
     private void getDataObat() {
-//        String[] nama = getResources().getStringArray(R.array.nama_obat);
-//        String[] harga = getResources().getStringArray(R.array.harga_obat);
-//        TypedArray gambar = getResources().obtainTypedArray(R.array.gambar_obat);
-//
-//        final String email = Auth.getCurrentUser().getEmail();
+
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -61,7 +57,7 @@ public class ObatHewan extends AppCompatActivity {
                     String nama = DS.child("nama").getValue().toString();
                     String harga = DS.child("harga").getValue().toString();
                     String gambar = DS.child("gambar").getValue().toString();
-                    String deskripsi = DS.child("desc").getValue().toString();
+                    String deskripsi = DS.child("deskripsi").getValue().toString();
 
                     Obat OH = new Obat(nama, harga, gambar, deskripsi);
 
@@ -75,15 +71,7 @@ public class ObatHewan extends AppCompatActivity {
                 showMessage("error", databaseError.getMessage());
             }
         });
-//
-//        obatlist.clear();
-//
-//        for (int i = 0; i < nama.length; i++) {
-//            obatlist.add(new Obat(nama[i], harga[i],
-//                    gambar.getResourceId(i, 0)));
-//        }
-//        gambar.recycle();
-//        mAdapter.notifyDataSetChanged();
+
     }
 
     public void history(View view) {
