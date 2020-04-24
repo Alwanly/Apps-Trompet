@@ -9,6 +9,11 @@
     <string name="txt1">txt</string>
     <string name="desc">desc</string>
     <string name="upload_bukti_transfer">Upload Bukti Transfer</string>
+    <string name="disimpan">Simpan Pesanan</string>
+    <string name="info1">Kantong belanja Berhasil dipilih</string>
+    <string name="info2">Silahkan bayar ditempat setelah menyimpan pesanan</string>
+    <string name="info3">Pesanan Berhasil Disimpan</string>
+    <string name="info4">Silahkan Bayar dan Ambil Produk di toko</string>
 
     <string-array name="judulmakan">
         <item>Me-o Cat Food</item>
@@ -52,6 +57,12 @@
         <item>Rp. 40000</item>
         <item>Rp. 40000</item>
 
+    </string-array>
+
+    <string-array name="deskripsi_makan">
+        <item>Me-o Cat Food Merupakan makanan untuk kucing dengan berbagai nutrisi pada setiap butir-nya</item>
+        <item>Cleo Cat Food Merupakan makanan kucing dengan kandungan protein 30%, lemak 9%, serat 5%, dan kandungan air 10%</item>
+        <item>Maxi Cat Food Makanan kucing merek ini dapat dikonsumsi oleh kucing Berusai muda dan dewasa</item>
     </string-array>
 
 

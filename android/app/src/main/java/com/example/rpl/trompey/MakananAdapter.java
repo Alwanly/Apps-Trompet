@@ -23,6 +23,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class MakananAdapter extends RecyclerView.Adapter<MakananAdapter.ViewHolder> {
     Context context;
     ArrayList<Makanan> makanan;
+    Button beli1;
 
     public MakananAdapter(Context context, ArrayList<Makanan> makanan) {
         this.context = context;
@@ -62,6 +63,19 @@ public class MakananAdapter extends RecyclerView.Adapter<MakananAdapter.ViewHold
             gambarmakan = inflate.findViewById(R.id.profile_pic);
             beli = inflate.findViewById(R.id.beli);
             beli.setOnClickListener(this);
+            inflate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Makanan currentMakan = makanan.get(getAdapterPosition());
+                    Intent detailIntent = new Intent(context, MakananHewanDetail.class);
+                    detailIntent.putExtra("nama", currentMakan.getJudulmakan());
+                    detailIntent.putExtra("harga", currentMakan.getHargamakan());
+                    detailIntent.putExtra("gambar", currentMakan.getGambarmakan());
+                    detailIntent.putExtra("deskripsi", currentMakan.getDeskripsimakanan());
+                    context.startActivity(detailIntent);
+
+                }
+            });
         }
 
         public void bindTo(Makanan ri) {
@@ -74,8 +88,6 @@ public class MakananAdapter extends RecyclerView.Adapter<MakananAdapter.ViewHold
         @Override
         public void onClick(View v) {
             Intent beli1 = new Intent(context, MakananBayar.class);
-
-
             Makanan currentObat = makanan.get(getAdapterPosition());
             beli1.putExtra("judulmakan", currentObat.getJudulmakan());
             beli1.putExtra("hargamakan", currentObat.getHargamakan());

@@ -4,14 +4,16 @@ public class Makanan {
     private String judulmakan;
     private int gambarmakan;
     private String hargamakan;
+    private String deskripsimakanan;
 
 
-    public Makanan(String judulmakan, int gambarmakan, String hargamakan
+    public Makanan(String judulmakan, int gambarmakan, String hargamakan, String deskripsimakanan
                    ) {
 
         this.judulmakan = judulmakan;
         this.gambarmakan = gambarmakan;
         this.hargamakan = hargamakan;
+        this.deskripsimakanan = deskripsimakanan;
 
 
 
@@ -25,6 +27,7 @@ public class Makanan {
     public String getHargamakan() {
         return hargamakan;
     }
+    public String getDeskripsimakanan () { return deskripsimakanan;}
 
 
 

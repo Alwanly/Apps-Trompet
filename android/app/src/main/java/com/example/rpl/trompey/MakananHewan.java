@@ -20,6 +20,7 @@ public class MakananHewan extends AppCompatActivity implements AdapterView.OnIte
     private String[] judulmakan;
     private TypedArray gambarmakan;
     private String[] hargamakan;
+    private String[] deskripsimakan;
 
     private RecyclerView mylistview;
     private MakananAdapter adapterlist;
@@ -32,10 +33,11 @@ public class MakananHewan extends AppCompatActivity implements AdapterView.OnIte
         judulmakan = getResources().getStringArray(R.array.judulmakan);
         gambarmakan = getResources().obtainTypedArray(R.array.gambarmakan);
         hargamakan = getResources().getStringArray(R.array.hargamakan);
+        deskripsimakan = getResources().getStringArray(R.array.deskripsi_makan);
 
         for (int i = 0; i < judulmakan.length; i++) {
             Makanan item = new Makanan(judulmakan[i],
-                    gambarmakan.getResourceId(i, -1), hargamakan[i]);
+                    gambarmakan.getResourceId(i, -1), hargamakan[i],deskripsimakan[i]);
             makanan.add(item);
         }
         mylistview = findViewById(R.id.list);
