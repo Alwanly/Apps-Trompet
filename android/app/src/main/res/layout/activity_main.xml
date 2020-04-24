@@ -54,26 +54,13 @@
 <!--        android:layout_marginBottom="447dp"-->
 <!--        android:src="@drawable/logo_trompet" />-->
 
-    <androidx.viewpager.widget.ViewPager
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:id="@+id/pager"
         android:layout_above="@id/nav-bot"/>
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/nav-bot"
-        android:layout_width="match_parent"
-        android:layout_height="79dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/white"
-        app:itemTextColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/button_navigation"
-        />
-
-
-    <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--    <com.google.android.material.tabs.TabLayout-->
 <!--        android:id="@+id/nav-bot"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="79dp"-->
@@ -82,6 +69,19 @@
 <!--        app:itemTextColor="#000000"-->
 <!--        app:layout_constraintBottom_toBottomOf="parent"-->
 <!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:menu="@menu/button_navigation" />-->
+<!--        app:menu="@menu/button_navigation"-->
+<!--        />-->
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav-bot"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:itemTextColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/button_navigation" />
 
 </RelativeLayout >

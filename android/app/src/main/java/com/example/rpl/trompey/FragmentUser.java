@@ -1,12 +1,11 @@
 package com.example.rpl.trompey;
 
-import android.content.Context;
+
 import android.content.Intent;
-import android.net.Uri;
+
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -14,18 +13,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.ImageView;
 import android.widget.Toast;
-
-import com.google.android.gms.auth.api.Auth;
+import com.bumptech.glide.Glide;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -33,27 +26,37 @@ import com.google.firebase.auth.FirebaseUser;
 public class FragmentUser extends Fragment implements View.OnClickListener {
     FirebaseAuth mFirebaseAuth;
     FirebaseUser mFirebaseUser;
-    EditText mUserView;
+    EditText mUserView,mDisplay,mphone;
     Button msignOut;
-    GoogleApiClient mGoogleApiClient;
+
     private  View v;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         LayoutInflater lf = getActivity().getLayoutInflater();
         v =  lf.inflate(R.layout.fragment_user, container, false);
-        mUserView = v.findViewById(R.id.edit_name);
-        msignOut = v.findViewById(R.id.signOut);
+        mUserView = v.findViewById(R.id.editText);
+        mDisplay = v.findViewById(R.id.editText2);
+        mphone = v.findViewById(R.id.editText3);
+        msignOut = v.findViewById(R.id.button3);
+        ImageView profil = v.findViewById(R.id.imageView2);
 
         msignOut.setOnClickListener(this);
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
-        mUserView.setText(mFirebaseUser.getDisplayName());
+
+        mUserView.setText(mFirebaseUser.getEmail());
+        mDisplay.setText(mFirebaseUser.getDisplayName());
+        mphone.setText(mFirebaseUser.getPhoneNumber());
+        if (mFirebaseUser.getPhotoUrl() != null ){
+            Glide.with(getActivity()).load(mFirebaseUser.getPhotoUrl()).override(300).into(profil);
+        }
+
         return v;
     }
 
     @Override
     public void onClick(View v) {
        switch (v.getId()){
-           case R.id.signOut:
+           case R.id.button3:
                signOut();
                break;
        }

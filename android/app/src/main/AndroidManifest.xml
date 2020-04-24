@@ -11,11 +11,45 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BookGroomingActivity"></activity>
-        <activity android:name=".DetailsGroomingActivity" />
-        <activity android:name=".PaketA" />
-        <activity android:name=".GroomingActivity" />
-        <activity android:name=".Grooming" />
+        <activity android:name=".GroomingMetodePembayaranActivity"></activity>
+        <activity android:name=".GroomingHistoryActivity" />
+        <activity
+            android:name=".ObatHewanCheckOut"
+            android:parentActivityName=".ObatHewan"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".ObatHewanBayar"
+            android:parentActivityName=".ObatHewan"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".ObatHewan"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".BuktiTransferActivity"
+            android:parentActivityName=".GroomingActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".PembayaranMakananActivity"
+            android:parentActivityName=".MenuMakananActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".MenuMakananActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".GroomingBookActivity"
+            android:parentActivityName=".GroomingActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".GroomingDetailsActivity"
+            android:parentActivityName=".GroomingActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".GroomingActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/ActionBar" />
+        <activity android:name=".ProfileActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
