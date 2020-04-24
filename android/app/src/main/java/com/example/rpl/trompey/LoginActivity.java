@@ -108,7 +108,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()){
             case R.id.btn_login:
                 loading = ProgressDialog.show(this,null,"Wait...",true,false);
-                login();
+
+                String isEmail = email.getText().toString();
+                String isPassword = password.getText().toString();
+                if (isEmail.isEmpty() || isPassword.isEmpty() ) {
+                    Toast.makeText(this, "Kosong", Toast.LENGTH_SHORT).show();
+                } else {
+                    login();
+                }
+
                 break;
             case R.id.signInButtonImpl:
                 loading = ProgressDialog.show(this,null,"Wait...",true,false);

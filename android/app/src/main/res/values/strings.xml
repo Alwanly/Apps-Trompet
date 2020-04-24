@@ -47,6 +47,38 @@
         <item>@drawable/logo_grooming</item>
     </string-array>
 
+    <string-array name="nama_dokter">
+        <item>drh. Alwan Alyafi Mulyawan</item>
+        <item>drh. Rahadian Ali Nugroho</item>
+        <item>drh. Made Darma Wijaya</item>
+        <item>drh. Windy Astuti</item>
+        <item>drh. Robi Dewi Asih Pramesti</item>
+    </string-array>
+
+    <string-array name="harga_dokter">
+        <item>Rp. 500.000</item>
+        <item>Rp. 400.000</item>
+        <item>Rp. 350.000</item>
+        <item>Rp. 450.000</item>
+        <item>Rp. 450.000</item>
+    </string-array>
+
+    <string-array name="gambar_dokter">
+        <item>@drawable/logo_dokter</item>
+        <item>@drawable/logo_dokter</item>
+        <item>@drawable/logo_dokter</item>
+        <item>@drawable/logo_dokter</item>
+        <item>@drawable/logo_dokter</item>
+    </string-array>
+
+    <string-array name="jadwal_dokter">
+        <item>Jadwal Setiap Hari Senin dan Minggu</item>
+        <item>Jadwal Setiap Hari Selasa</item>
+        <item>Jadwal Setiap Hari Rabu</item>
+        <item>Jadwal Setiap Hari Kamis</item>
+        <item>Jadwal Setiap Hari Jumat dan Sabtu</item>
+    </string-array>
+
     <string-array name="status">
         <item>Rp. 40000</item>
         <item>Rp. 40000</item>
@@ -71,4 +103,9 @@
     <string name="Paket">Paket</string>
     <string name="Isi">Isi</string>
     <string name="Harga">Harga</string>
+    <string name="doctor">Doctor</string>
+    <string name="detail_dokter">Detail</string>
+    <string name="doctor_history">Doctor History</string>
+    <string name="history_dokter">History</string>
+
 </resources>
