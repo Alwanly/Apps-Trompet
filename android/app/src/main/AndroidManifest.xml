@@ -11,9 +11,45 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BuktiTransferActivity"></activity>
-        <activity android:name=".PembayaranMakananActivity" />
-        <activity android:name=".MenuMakananActivity" />
+        <activity android:name=".MakananHewanDetail"></activity>
+        <activity android:name=".MakananHewanHistory" />
+        <activity
+            android:name=".ObatHewanCheckOut"
+            android:parentActivityName=".ObatHewan"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".ObatHewanBayar"
+            android:parentActivityName=".ObatHewan"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".ObatHewan"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".BuktiTransferActivity"
+            android:parentActivityName=".GroomingActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".MakananBayar"
+            android:parentActivityName=".MakananHewan"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".MakananHewan"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".BookGroomingActivity"
+            android:parentActivityName=".GroomingActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".DetailsGroomingActivity"
+            android:parentActivityName=".GroomingActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".GroomingActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/ActionBar" />
+        <activity android:name=".ProfileActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,11 +58,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegistrasiActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
+
+
+
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
+
 
 </manifest>
