@@ -78,4 +78,6 @@
     <string name="Harga">Harga</string>
     <string name="iklanHome">Punya peliharaan bingung ngurus-nya? Pakai TROMPET saja!</string>
     <string name="historymakanan">History Makanan</string>
+    <string name="emptyEmail">email kosong</string>
+    <string name="emptyPassword">password kosong</string>
 </resources>

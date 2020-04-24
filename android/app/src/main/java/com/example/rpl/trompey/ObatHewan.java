@@ -45,10 +45,10 @@ public class ObatHewan extends AppCompatActivity {
 
         obatlist.clear();
 
-        for (int i = 0; i < nama.length; i++) {
-            obatlist.add(new Obat(nama[i], harga[i],
-                    gambar.getResourceId(i, 0)));
-        }
+//        for (int i = 0; i < nama.length; i++) {
+//            obatlist.add(new Obat(nama[i], harga[i],
+//                    gambar.getResourceId(i, 0)));
+//        }
         gambar.recycle();
         mAdapter.notifyDataSetChanged();
     }
