@@ -9,15 +9,20 @@
     <string name="txt1">txt</string>
     <string name="desc">desc</string>
     <string name="upload_bukti_transfer">Upload Bukti Transfer</string>
+    <string name="disimpan">Simpan Pesanan</string>
+    <string name="info1">Kantong belanja Berhasil dipilih</string>
+    <string name="info2">Silahkan bayar ditempat setelah menyimpan pesanan</string>
+    <string name="info3">Pesanan Berhasil Disimpan</string>
+    <string name="info4">Silahkan Bayar dan Ambil Produk di toko</string>
 
-    <string-array name="member_names">
+    <string-array name="judulmakan">
         <item>Me-o Cat Food</item>
         <item>Cleo Cat Food</item>
         <item>Maxi Cat Food</item>
 
     </string-array>
 
-    <string-array name="profile_pics">
+    <string-array name="gambarmakan">
         <item>@drawable/cat1_f</item>
         <item>@drawable/cat2_f</item>
         <item>@drawable/cat3_f</item>
@@ -47,19 +52,19 @@
         <item>@drawable/logo_grooming</item>
     </string-array>
 
-    <string-array name="status">
+    <string-array name="hargamakan">
         <item>Rp. 40000</item>
         <item>Rp. 40000</item>
         <item>Rp. 40000</item>
 
     </string-array>
 
-    <string-array name="contact_type">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+    <string-array name="deskripsi_makan">
+        <item>Me-o Cat Food Merupakan makanan untuk kucing dengan berbagai nutrisi pada setiap butir-nya</item>
+        <item>Cleo Cat Food Merupakan makanan kucing dengan kandungan protein 30%, lemak 9%, serat 5%, dan kandungan air 10%</item>
+        <item>Maxi Cat Food Makanan kucing merek ini dapat dikonsumsi oleh kucing Berusai muda dan dewasa</item>
     </string-array>
+
 
     <string name="A">A</string>
     <string name="B">B</string>
@@ -71,4 +76,6 @@
     <string name="Paket">Paket</string>
     <string name="Isi">Isi</string>
     <string name="Harga">Harga</string>
+    <string name="iklanHome">Punya peliharaan bingung ngurus-nya? Pakai TROMPET saja!</string>
+    <string name="historymakanan">History Makanan</string>
 </resources>

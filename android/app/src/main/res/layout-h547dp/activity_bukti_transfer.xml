@@ -13,8 +13,7 @@
         android:layout_height="178dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/logo_trompet"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"></ImageView>
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
 
 
     <TextView
@@ -40,13 +39,15 @@
 
         android:layout_width="398dp"
         android:layout_height="310dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/judulmakanan2">
+        app:layout_constraintTop_toBottomOf="@+id/judulmakanan2"
+        app:layout_constraintVertical_bias="0.409">
 
 
         <LinearLayout
@@ -97,9 +98,10 @@
                 <TextView
 
                     android:id="@+id/textView4"
-                    android:layout_width="340dp"
+                    android:layout_width="match_parent"
                     android:layout_height="263dp"
                     android:background="#005D6FAF"
+android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:text="@string/info4"
                     android:textColor="#FFFFFF"

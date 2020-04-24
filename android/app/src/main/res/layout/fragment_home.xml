@@ -4,47 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/bgapps">
 
 
     <TextView
         android:id="@+id/button"
-        android:layout_width="348dp"
-        android:layout_height="141dp"
+        android:layout_width="373dp"
+        android:layout_height="163dp"
+        android:layout_marginTop="128dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="false"
-        android:layout_marginStart="34dp"
-        android:layout_marginLeft="34dp"
-        android:layout_marginTop="131dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
         android:layout_marginEnd="29dp"
         android:layout_marginRight="29dp"
         android:background="@drawable/rounded_1"
-        android:elevation="-60dp"
+        android:elevation="20dp"
         android:gravity="center|center_horizontal"
         android:text=""
         android:textColor="#000000"
         android:textSize="35sp"
         android:textStyle="bold"
         android:typeface="normal"
-
         app:fontFamily="@font/roboto_medium"
         tools:layout_editor_absoluteY="176dp" />
 
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="match_parent"
-        android:layout_height="166dp"
-        android:background="#5D6FAF"
-        android:elevation="-300dp"
-        tools:layout_editor_absoluteX="-8dp"
-        tools:layout_editor_absoluteY="-15dp" />
-
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="181dp"
+        android:layout_width="407dp"
+        android:layout_height="178dp"
+        android:layout_marginTop="20dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -52,7 +43,6 @@
         android:layout_alignParentRight="true"
         android:layout_marginStart="104dp"
         android:layout_marginLeft="104dp"
-        android:layout_marginTop="-21dp"
         android:layout_marginEnd="107dp"
         android:layout_marginRight="107dp"
         android:layout_marginBottom="447dp"
@@ -67,122 +57,160 @@
         android:layout_alignRight="@+id/button"
         android:layout_alignBottom="@+id/button"
         android:layout_marginEnd="22dp"
+        android:elevation="70dp"
         android:layout_marginRight="22dp"
         android:layout_marginBottom="34dp"
         android:layout_centerHorizontal="true"
-        android:text="Punya peliharaan bingung ngurus-nya? Pakai TROMPET saja!"
+        android:text="@string/iklanHome"
         android:textColor="#000000"
         android:textSize="15sp"
         app:fontFamily="@font/roboto_regular" />
 
     <ImageView
-        android:layout_width="106dp"
-        android:layout_height="234dp"
+        android:layout_width="140dp"
+        android:layout_height="368dp"
+        android:layout_alignStart="@+id/button"
+        android:layout_alignLeft="@+id/button"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="77dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginRight="9dp"
-        android:layout_centerHorizontal="true"
-        android:layout_toStartOf="@+id/textView4"
-        android:layout_toLeftOf="@+id/textView4"
-        android:src="@drawable/iklan_1" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="244dp"
+        android:layout_marginRight="244dp"
+        android:elevation="70dp"
+        android:src="@drawable/iklan3" />
 
     <LinearLayout
-    android:id="@+id/menu1"
-    android:layout_marginStart="80dp"
-    android:layout_below="@id/button"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_marginLeft="30dp">
+        android:id="@+id/menu1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
 
-    <LinearLayout
-        android:id="@+id/menu_doctor"
-        android:layout_margin="5dp"
-        android:orientation="vertical"
-        android:layout_width="100dp"
-        android:layout_height="100dp">
+        android:layout_marginStart="75dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginRight="75dp"
+        android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:src="@mipmap/ic_dokter"/>
-        <TextView
-            android:textColor="@color/colorPrimaryDark"
-            android:textAlignment="center"
-            android:textSize="10sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Doctor"/>
-    </LinearLayout>
         <LinearLayout
+            android:id="@+id/menu_doctor"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:id="@+id/menu_pet_food"
             android:orientation="vertical"
-            android:layout_width="100dp"
-            android:layout_height="100dp">
+
+            >
+
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:src="@mipmap/ic_pet_food"/>
+                android:layout_height="100dp"
+                android:background="@drawable/menu"
+                android:src="@mipmap/ic_dokter" />
+
             <TextView
-                android:textColor="@color/colorPrimaryDark"
-                android:textAlignment="center"
-                android:textSize="10sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Pet Food"/>
+                android:text="Doctor"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_pet_food"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/menu"
+
+                android:src="@mipmap/ic_pet_food" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pet Food"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/menu2"
-        android:layout_marginStart="80dp"
-        android:layout_below="@id/menu1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="30dp">
+        android:layout_below="@id/menu1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="75dp"
+        android:layout_marginLeft="75dp"
+
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginRight="75dp"
+        android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/menu_grooming"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:orientation="vertical"
-            android:layout_width="100dp"
-            android:layout_height="100dp">
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:src="@mipmap/ic_grooming"/>
+                android:layout_height="100dp"
+                android:background="@drawable/menu"
+
+                android:src="@mipmap/ic_grooming" />
+
             <TextView
-                android:textColor="@color/colorPrimaryDark"
-                android:textAlignment="center"
-                android:textSize="10sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Grooming"/>
+                android:text="Grooming"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/menu_medicine"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:orientation="vertical"
-            android:layout_width="100dp"
-            android:layout_height="100dp">
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:src="@mipmap/ic_medicine"/>
+                android:layout_height="100dp"
+                android:background="@drawable/menu"
+
+                android:src="@mipmap/ic_medicine" />
+
             <TextView
-                android:textColor="@color/colorPrimaryDark"
-                android:textAlignment="center"
-                android:textSize="10sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Medicine"/>
+                android:text="Medicine"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
+
 
 </RelativeLayout>

@@ -4,49 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".MakananBayar"
     android:background="@drawable/bgapps">
 
-
     <ImageView
+        android:id="@+id/imageView6"
         android:layout_width="407dp"
         android:layout_height="178dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/logo_trompet"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"></ImageView>
-
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
 
     <TextView
         android:id="@+id/judulmakanan2"
-        android:layout_width="386dp"
-        android:layout_height="151dp"
+        android:layout_width="373dp"
+        android:layout_height="163dp"
         android:layout_marginTop="128dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+
+        android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_1"
         android:elevation="20dp"
         android:gravity="center"
-        android:text="@string/pet_food"
+        android:text="Pet Food"
         android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
     </TextView>
 
     <ScrollView
 
-        android:layout_width="398dp"
-        android:layout_height="310dp"
-        android:layout_marginTop="20dp"
+        android:id="@+id/scrollView2"
+        android:layout_width="410dp"
+        android:layout_height="432dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="230dp"
         android:layout_marginBottom="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/judulmakanan2">
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintVertical_bias="0.39">
 
 
         <LinearLayout
@@ -61,7 +71,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="350dp"
-                android:layout_height="250dp"
+                android:layout_height="350dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="@dimen/cardview_compat_inset_shadow"
@@ -71,15 +81,26 @@
                 app:cardCornerRadius="10dp"
                 app:cardElevation="20dp">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="#005D6FAF"
+                    android:gravity="center|top"
+                    android:text="@string/info1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
 
                     android:id="@+id/textView"
-                    android:layout_width="340dp"
+                    android:layout_width="match_parent"
                     android:layout_height="184dp"
+                    android:layout_marginTop="-35dp"
                     android:background="#005D6FAF"
                     android:gravity="center"
-                    android:text="@string/info3"
+                    android:text="@string/info2"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
 
@@ -101,9 +122,44 @@
                     android:layout_height="263dp"
                     android:background="#005D6FAF"
                     android:gravity="center"
-                    android:text="@string/info4"
+                    android:text="Kantong Belanja"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
+
+                <TextView
+
+                    android:id="@+id/judulmakan"
+                    android:layout_width="200dp"
+                    android:layout_height="400dp"
+                    android:layout_marginLeft="-20dp"
+                    android:background="#005D6FAF"
+                    android:gravity="center"
+                    android:text="NAMA BARANG"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <TextView
+
+                    android:id="@+id/hargamakan"
+                    android:layout_width="350dp"
+                    android:layout_height="400dp"
+                    android:layout_marginLeft="-20dp"
+                    android:background="#005D6FAF"
+                    android:gravity="right|center"
+                    android:text="HARGA BARANG"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/beli1"
+                    android:layout_width="212dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/judulmakanan"
+                    android:onClick="upload"
+                    android:text="@string/disimpan"
+                    android:textColor="#FFFFFF" />
 
 
             </androidx.cardview.widget.CardView>
