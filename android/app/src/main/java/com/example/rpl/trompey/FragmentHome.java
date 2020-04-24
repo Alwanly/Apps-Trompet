@@ -32,6 +32,8 @@ public class FragmentHome extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.menu_doctor:
+                Intent admin = new Intent(getActivity(),ListAdminActivity.class);
+                getActivity().startActivity(admin);
                 Toast.makeText(getActivity(),"Doctor",Toast.LENGTH_SHORT).show();
                 break;
                 case R.id.menu_grooming:

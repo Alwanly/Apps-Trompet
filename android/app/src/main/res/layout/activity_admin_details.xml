@@ -38,22 +38,34 @@
             android:id="@+id/profile_pic"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@mipmap/ic_dokter"
+            android:src="@drawable/cowo"
             android:layout_gravity="center"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="@string/dokter"
+            android:text="@string/email"
             android:textAlignment="center"
             android:textSize="24sp"
             android:id="@+id/tv_name"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="@string/status"
-            android:textAlignment="center"/>
+            android:text="@string/Paket"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:id="@+id/tv_paket"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/Harga"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:id="@+id/tv_harga"/>
 
     </LinearLayout>
 
@@ -62,10 +74,10 @@
         android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="200dp">
+        android:layout_marginTop="30dp">
 
         <Button
-            android:id="@+id/btn_tolak"
+            android:id="@+id/btn_decline"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_logout"
@@ -78,7 +90,7 @@
             android:layout_height="wrap_content" />
 
         <Button
-            android:id="@+id/btn_terima"
+            android:id="@+id/btn_accept"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_terima"

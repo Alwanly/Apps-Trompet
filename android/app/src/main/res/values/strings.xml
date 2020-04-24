@@ -7,7 +7,7 @@
     <string name="beli">Beli</string>
     <string name="txt">txt</string>
     <string name="txt1">txt</string>
-    <string name="desc">desc</string>
+    <string name="desc">Deskripsi</string>
     <string name="upload_bukti_transfer">Upload Bukti Transfer</string>
 
     <string-array name="member_names">
@@ -59,7 +59,6 @@
         <item></item>
     </string-array>
 
-
     <string name="A">A</string>
     <string name="B">B</string>
     <string name="C">C</string>
@@ -79,4 +78,11 @@
     <string name="tolak">Tolak</string>
     <string name="terima">Terima</string>
     <string name="address">Address</string>
+    <string name="list_accept">List Accept</string>
+    <string name="emptyEmail">Email Kosong</string>
+    <string name="emptyPassword">Password Kosong</string>
+    <string name="nama_obat">Nama Obat</string>
+    <string name="list_decline">List Decline</string>
+    <string name="tambah_obat">Tambah Obat</string>
+    <string name="title_activity_list_admin_obat">ListAdminObat</string>
 </resources>

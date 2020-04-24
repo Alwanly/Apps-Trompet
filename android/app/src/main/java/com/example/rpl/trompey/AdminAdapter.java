@@ -1,6 +1,7 @@
 package com.example.rpl.trompey;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,15 +58,18 @@ public class AdminAdapter extends RecyclerView.Adapter<AdminAdapter.ViewHolder> 
             cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(mContext, name.getText().toString(), Toast.LENGTH_SHORT).show();
+                    GroomingAdmin ga = adminArrayList.get(getAdapterPosition());
+                    Intent detailGrooming = new Intent(mContext,AdminDetailsActivity.class);
+                    detailGrooming.putExtra("id",ga.getId());
+
+                    mContext.startActivity(detailGrooming);
                 }
             });
         }
 
         public void bindTo(GroomingAdmin gd) {
-            name.setText(gd.getName());
+            name.setText(gd.getEmail());
             status.setText(gd.getStatus());
-            Glide.with(mContext).load(gd.getImage()).override(70).load(img);
         }
     }
 }

@@ -11,8 +11,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdminDetailsActivity" />
-        <activity android:name=".ListAdminActivity" />
+        <activity
+            android:name=".ListAdminObat"
+            android:parentActivityName=".MenuAdminActivity"
+            android:theme="@style/ActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rpl.trompey.MenuAdminActivity" />
+        </activity>
+        <activity android:name=".AddObatHewan" android:parentActivityName=".ListAdminObat" android:theme="@style/ActionBar" />
+        <activity
+            android:name=".ListAdminDecline"
+            android:parentActivityName=".MenuAdminActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".ListAdminAccept"
+            android:parentActivityName=".MenuAdminActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".AdminDetailsActivity"
+            android:parentActivityName=".MenuAdminActivity"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".ListAdminActivity"
+            android:parentActivityName=".MenuAdminActivity"
+            android:theme="@style/ActionBar" />
         <activity android:name=".MenuAdminActivity" />
         <activity
             android:name=".ObatHewanCheckOut"
