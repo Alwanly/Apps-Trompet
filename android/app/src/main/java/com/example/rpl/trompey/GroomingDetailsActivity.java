@@ -14,15 +14,14 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 
-public class DetailsGroomingActivity extends AppCompatActivity {
+public class GroomingDetailsActivity extends AppCompatActivity {
     String paket,isi,harga;
-    DatabaseReference myRef;
-    FirebaseAuth Auth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details_grooming);
-
+        setTitle("Details Grooming");
         Intent intent = getIntent();
 
         TextView tvPaket = findViewById(R.id.tv_paket);
@@ -37,24 +36,13 @@ public class DetailsGroomingActivity extends AppCompatActivity {
         tvIsi.setText(isi);
         tvHarga.setText(harga);
 
-        Auth = FirebaseAuth.getInstance();
-        myRef = FirebaseDatabase.getInstance().getReference("Data Paket Grooming");
+
     }
     public void Book(View view) {
-        String id = myRef.push().getKey();
-        String email = Auth.getCurrentUser().getEmail();
-
-        HashMap<Object, String> datapaketgrooming = new HashMap<>();
-        datapaketgrooming.put("id", id);
-        datapaketgrooming.put("email", email);
-        datapaketgrooming.put("paket", paket);
-        datapaketgrooming.put("isi", isi);
-        datapaketgrooming.put("harga", harga);
-
-        myRef.child(id).setValue(datapaketgrooming);
-
-        Toast.makeText(this, "Succes",Toast.LENGTH_SHORT).show();
-        Intent book = new Intent(this,BookGroomingActivity.class);
+        Intent book = new Intent(this, GroomingMetodePembayaranActivity.class);
+        book.putExtra("PAKET", paket);
+        book.putExtra("ISI",isi);
+        book.putExtra("HARGA",harga);
         startActivity(book);
 
     }
