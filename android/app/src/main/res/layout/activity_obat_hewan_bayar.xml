@@ -4,19 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ObatHewanBayar"
-    android:background="@drawable/bgapps">
+    android:background="@drawable/bgapps"
+    tools:context=".ObatHewanBayar">
 
 
     <ScrollView
 
         android:layout_width="398dp"
-        android:layout_height="310dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="377dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/judulmenumakanan"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/judulmenumakanan">
 
 
         <LinearLayout
@@ -101,7 +100,6 @@
                     android:layout_height="400dp"
                     android:background="#005D6FAF"
                     android:gravity="right|center"
-                    android:layout_marginLeft="-20dp"
                     android:text="HARGA BARANG"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
@@ -111,11 +109,10 @@
                     android:layout_width="212dp"
                     android:layout_height="38dp"
                     android:layout_gravity="bottom|center"
-                    android:layout_marginLeft="-20dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/judulmakanan"
                     android:onClick="Bayar"
-                    android:text="Upload Bukti Transfer"
+                    android:text="Simpan Pesanan"
                     android:textColor="#FFFFFF" />
 
 
@@ -139,47 +136,34 @@
         </LinearLayout>
     </ScrollView>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="221dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.606"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
     <ImageView
         android:id="@+id/logomenumakanan"
         android:layout_width="269dp"
         android:layout_height="125dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0"
+
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_trompet" />
 
     <TextView
         android:id="@+id/judulmenumakanan"
-        android:layout_width="386dp"
-        android:layout_height="151dp"
+        android:layout_width="256dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="96dp"
         android:background="@drawable/rounded_1"
         android:elevation="20dp"
         android:gravity="center"
-        android:text="Pet Medicine"
+        android:text="@string/pet_medicine"
         android:textColor="#000000"
         android:textSize="30sp"
 
-
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logomenumakanan"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav-bot"

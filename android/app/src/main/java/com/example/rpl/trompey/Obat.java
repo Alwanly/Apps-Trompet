@@ -3,45 +3,14 @@ package com.example.rpl.trompey;
 import android.graphics.drawable.Drawable;
 
 public class Obat {
-    private String nama, harga,desc;
-    private String gambar;
+    private String nama, harga, gambar, deskripsi;
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    private String id;
-
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
-
-    public Obat() {
-    }
-
-    public Obat(String nama, String harga, String desc, String gambar) {
+    public Obat(String nama, String harga, String gambar, String deskripsi) {
         this.nama = nama;
         this.harga = harga;
         this.gambar = gambar;
-        this.desc = desc;
+        this.deskripsi = deskripsi;
     }
-
-    public String getGambar() {
-        return gambar;
-    }
-
-    public void setGambar(String gambar) {
-        this.gambar = gambar;
-    }
-
 
     public String getNama() {
         return nama;
@@ -57,5 +26,21 @@ public class Obat {
 
     public void setHarga(String harga) {
         this.harga = harga;
+    }
+
+    public String getGambar() {
+        return gambar;
+    }
+
+    public void setGambar(String gambar) {
+        this.gambar = gambar;
+    }
+
+    public String getDeskripsi() {
+        return deskripsi;
+    }
+
+    public void setDeskripsi(String deskripsi) {
+        this.deskripsi = deskripsi;
     }
 }

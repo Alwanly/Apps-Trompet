@@ -84,4 +84,6 @@
     <string name="historymakanan">History Makanan</string>
     <string name="emptyEmail">email kosong</string>
     <string name="emptyPassword">password kosong</string>
+    <string name="button_history">History Obat</string>
+    <string name="history_obat">Pet Medicine</string>
 </resources>

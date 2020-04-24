@@ -9,23 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MakananHewanDetail"></activity>
-        <activity android:name=".MakananHewanHistory" />
-        <activity
-            android:name=".MakananBayar"
-            android:parentActivityName=".MakananHewan"
-            android:theme="@style/ActionBar" />
-        <activity
-            android:name=".MakananHewan"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/ActionBar" />
-        <activity
-            android:name=".GroomingActivity"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/ActionBar" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".GroomingMetodePembayaranActivity"></activity>
-        <activity android:name=".GroomingHistoryActivity" />
+        <activity android:name=".ObatHewanDetail"></activity>
+        <activity android:name=".ObatHewanHistory" />
         <activity
             android:name=".ObatHewanCheckOut"
             android:parentActivityName=".ObatHewan"
@@ -51,6 +36,24 @@
             android:parentActivityName=".MainActivity"
             android:theme="@style/ActionBar" />
         <activity
+            android:name=".GroomingActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/ActionBar" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".MakananHewanDetail"></activity>
+        <activity android:name=".MakananHewanHistory" />
+        <activity
+            android:name=".MakananBayar"
+            android:parentActivityName=".MakananHewan"
+            android:theme="@style/ActionBar" />
+        <activity
+            android:name=".MakananHewan"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/ActionBar" />
+        <activity android:name=".GroomingMetodePembayaranActivity"></activity>
+        <activity android:name=".GroomingHistoryActivity" />
+
+        <activity
             android:name=".GroomingBookActivity"
             android:parentActivityName=".GroomingActivity"
             android:theme="@style/ActionBar" />
@@ -61,7 +64,6 @@
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
