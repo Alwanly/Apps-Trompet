@@ -61,6 +61,11 @@
             android:name=".GroomingDetailsActivity"
             android:parentActivityName=".GroomingActivity"
             android:theme="@style/ActionBar" />
+        <activity android:name=".DokterHistoryActivity"></activity>
+        <activity android:name=".DokterCheckOut" />
+        <activity android:name=".PembayaranDokter" />
+        <activity android:name=".DetailDokter" />
+        <activity android:name=".DokterActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
