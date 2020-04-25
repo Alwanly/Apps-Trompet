@@ -11,32 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".ListAdminObat"
-            android:parentActivityName=".MenuAdminActivity"
-            android:theme="@style/ActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.rpl.trompey.MenuAdminActivity" />
-        </activity>
-        <activity android:name=".AddObatHewan" android:parentActivityName=".ListAdminObat" android:theme="@style/ActionBar" />
-        <activity
-            android:name=".ListAdminDecline"
-            android:parentActivityName=".MenuAdminActivity"
-            android:theme="@style/ActionBar" />
-        <activity
-            android:name=".ListAdminAccept"
-            android:parentActivityName=".MenuAdminActivity"
-            android:theme="@style/ActionBar" />
-        <activity
-            android:name=".AdminDetailsActivity"
-            android:parentActivityName=".MenuAdminActivity"
-            android:theme="@style/ActionBar" />
-        <activity
-            android:name=".ListAdminActivity"
-            android:parentActivityName=".MenuAdminActivity"
-            android:theme="@style/ActionBar" />
-        <activity android:name=".MenuAdminActivity" />
+        <activity android:name=".MakananHewanDetail"></activity>
+        <activity android:name=".MakananHewanHistory" />
         <activity
             android:name=".ObatHewanCheckOut"
             android:parentActivityName=".ObatHewan"
@@ -54,11 +30,11 @@
             android:parentActivityName=".GroomingActivity"
             android:theme="@style/ActionBar" />
         <activity
-            android:name=".PembayaranMakananActivity"
-            android:parentActivityName=".MenuMakananActivity"
+            android:name=".MakananBayar"
+            android:parentActivityName=".MakananHewan"
             android:theme="@style/ActionBar" />
         <activity
-            android:name=".MenuMakananActivity"
+            android:name=".MakananHewan"
             android:parentActivityName=".MainActivity"
             android:theme="@style/ActionBar" />
         <activity
@@ -82,11 +58,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegistrasiActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
+
+
+
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
+
 
 </manifest>

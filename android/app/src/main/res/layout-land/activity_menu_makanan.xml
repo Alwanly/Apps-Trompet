@@ -10,17 +10,22 @@
     tools:context=".MakananHewan">
 
     <ImageView
-        android:layout_width="407dp"
-        android:layout_height="178dp"
-        android:layout_marginTop="20dp"
+        android:id="@+id/imageView"
+        android:layout_width="371dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/logo_trompet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></ImageView>
 
     <TextView
         android:id="@+id/judulmakanan"
-        android:layout_width="373dp"
-        android:layout_height="163dp"
-        android:layout_marginTop="128dp"
+        android:layout_width="144dp"
+        android:layout_height="254dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="108dp"
         android:background="@drawable/rounded_1"
         android:elevation="20dp"
         android:gravity="center"
@@ -28,25 +33,30 @@
         android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></TextView>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.929"></TextView>
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="117dp"
         android:layout_height="46dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="192dp"
         android:background="@drawable/judulmakanan"
+        android:elevation="40dp"
         android:gravity="center"
         android:onClick="historymakan"
         android:text="History"
         android:textColor="#FFFFFF"
         android:textSize="17sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/judulmakanan"></TextView>
+        app:layout_constraintBottom_toBottomOf="@+id/judulmakanan"
+        app:layout_constraintEnd_toEndOf="@+id/judulmakanan"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="@+id/judulmakanan">
+
+    </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
@@ -56,11 +66,12 @@
         android:divider="@drawable/divider"
         android:dividerHeight="20dp"
         android:paddingRight="0dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.557"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.0">
 
     </androidx.recyclerview.widget.RecyclerView>

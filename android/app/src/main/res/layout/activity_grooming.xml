@@ -43,8 +43,8 @@
 
         <TextView
             android:id="@+id/textView_Grooming"
-            android:layout_width="365dp"
-            android:layout_height="135dp"
+            android:layout_width="355dp"
+            android:layout_height="43dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
@@ -52,21 +52,14 @@
             android:layout_marginTop="300dp"
             android:layout_marginEnd="28dp"
             android:layout_marginRight="28dp"
-            android:layout_marginBottom="280dp"
             android:text="Pilih Paket Grooming"
             android:textSize="24sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_A"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="170dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
             android:layout_marginStart="17dp"
             android:layout_marginLeft="17dp"
             android:layout_marginTop="357dp"
@@ -103,7 +96,7 @@
             android:layout_marginRight="145dp"
             android:layout_marginBottom="204dp"
             android:background="@drawable/rounded_menu"
-            android:elevation="300dp"
+            android:elevation="20dp"
             android:gravity="center|center_horizontal"
             android:text="@string/B"
             android:textAlignment="gravity"

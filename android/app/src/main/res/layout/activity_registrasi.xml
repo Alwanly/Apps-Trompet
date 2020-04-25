@@ -22,6 +22,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView_juduluser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:text="Username"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        app:fontFamily="@font/roboto_thin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edittext_username"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="200dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edittext_email"
@@ -71,7 +96,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginLeft="48dp"
         android:ems="10"
-        android:inputType="textVisiblePassword"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -81,29 +106,28 @@
         android:id="@+id/button_daftar"
         android:layout_width="276dp"
         android:layout_height="37dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginLeft="76dp"
-        android:layout_marginTop="528dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="564dp"
         android:background="@drawable/rounded"
         android:text="Daftar"
         android:textColor="#5D6FAF"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView_konfirmasi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:layout_marginBottom="264dp"
+        android:layout_marginBottom="240dp"
         android:text="Sudah mempunyai akun?"
         android:textColor="@android:color/white"
         app:fontFamily="@font/roboto_thin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittext_pass" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textview_login"
@@ -117,25 +141,22 @@
         app:fontFamily="@font/roboto_medium"
         app:layout_constraintBottom_toTopOf="@+id/button_daftar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.444" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.gms.common.internal.SignInButtonImpl
-        android:onClick="signUpGoogle"
         android:id="@+id/signUpGoogle"
         android:layout_width="55dp"
         android:layout_height="42dp"
         android:layout_marginBottom="40dp"
         android:drawableBottom="@drawable/googleg_standard_color_18"
+        android:src="@drawable/google"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:onClick="signUpGoogle"
         android:id="@+id/textView"
         android:layout_width="366dp"
         android:layout_height="40dp"
@@ -149,5 +170,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/signUpGoogle" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

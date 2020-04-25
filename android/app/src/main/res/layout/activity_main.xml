@@ -5,12 +5,73 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+<!--    <TextView-->
+<!--        android:id="@+id/"-->
+<!--        android:layout_width="347dp"-->
+<!--        android:layout_height="168dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentBottom="false"-->
+<!--        android:layout_marginStart="35dp"-->
+<!--        android:layout_marginLeft="35dp"-->
+<!--        android:layout_marginTop="104dp"-->
+<!--        android:layout_marginEnd="29dp"-->
+<!--        android:layout_marginRight="29dp"-->
+<!--        android:background="@drawable/rounded_1"-->
+<!--        android:elevation="300dp"-->
+<!--        android:gravity="center|center_horizontal"-->
+<!--        android:text="Food and Goodies"-->
+<!--        android:textColor="#000000"-->
+<!--        android:textSize="35sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:typeface="normal"-->
+<!--        app:fontFamily="@font/roboto_medium"-->
+<!--        tools:layout_editor_absoluteX="350dp"-->
+<!--        tools:layout_editor_absoluteY="176dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/title"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="166dp"-->
+<!--        android:background="#5D6FAF"-->
+<!--        tools:layout_editor_absoluteX="-8dp"-->
+<!--        tools:layout_editor_absoluteY="-15dp" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="181dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginStart="104dp"-->
+<!--        android:layout_marginLeft="104dp"-->
+<!--        android:layout_marginTop="-21dp"-->
+<!--        android:layout_marginEnd="107dp"-->
+<!--        android:layout_marginRight="107dp"-->
+<!--        android:layout_marginBottom="447dp"-->
+<!--        android:src="@drawable/logo_trompet" />-->
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:id="@+id/pager"
         android:layout_above="@id/nav-bot"/>
+
+<!--    <com.google.android.material.tabs.TabLayout-->
+<!--        android:id="@+id/nav-bot"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="79dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:background="@color/white"-->
+<!--        app:itemTextColor="#000000"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:menu="@menu/button_navigation"-->
+<!--        />-->
+
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav-bot"
