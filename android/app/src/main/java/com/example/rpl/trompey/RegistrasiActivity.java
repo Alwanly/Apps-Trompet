@@ -140,7 +140,6 @@ public class RegistrasiActivity extends AppCompatActivity {
                             Authentication(user);
                         } else {
                             loading.dismiss();
-                            // If sign in fails, display a message to the user.
                             Log.w("error", "signInWithCredential:failure", task.getException());
 
                         }
@@ -182,13 +181,14 @@ public class RegistrasiActivity extends AppCompatActivity {
                     Toast.makeText(RegistrasiActivity.this, "Authentication Success", Toast.LENGTH_SHORT).show();
                     loading.dismiss();
                 }else {
-
+                    loading.dismiss();
                     Toast.makeText(RegistrasiActivity.this, "Sudah terdaftar", Toast.LENGTH_SHORT).show();
                 }
                 sigoutGoogle();
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
+                loading.dismiss();
                 sigoutGoogle();
             }
         });

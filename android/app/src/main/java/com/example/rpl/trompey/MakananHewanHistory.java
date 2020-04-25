@@ -62,8 +62,6 @@ public class MakananHewanHistory extends AppCompatActivity {
 
                         MakananHistory OH = new MakananHistory(nama, harga);
 
-                        Toast.makeText(MakananHewanHistory.this, nama, Toast.LENGTH_SHORT).show();
-                        Toast.makeText(MakananHewanHistory.this, harga, Toast.LENGTH_SHORT).show();
 
                         history.add(OH);
                     }
