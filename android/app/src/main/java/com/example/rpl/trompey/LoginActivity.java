@@ -91,7 +91,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            loading.dismiss();
                             FirebaseUser user = mAuth.getCurrentUser();
                             Authentication(user.getUid());
                         } else {
@@ -234,9 +233,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         finish();
                     }
                 }else {
-                    loading.dismiss();
+
                     Toast.makeText(LoginActivity.this, "Belum terdaftar", Toast.LENGTH_SHORT).show();
+                    mAuth.signOut();
                 }
+                loading.dismiss();
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {

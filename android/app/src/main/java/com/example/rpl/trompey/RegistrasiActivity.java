@@ -54,6 +54,7 @@ public class RegistrasiActivity extends AppCompatActivity {
     ProgressDialog loading;
     private FirebaseAuth mAuth;
     GoogleSignInClient mGoogleSignInClient;
+    TextView login;
     private static final int RC_SIGN_IN = 101 ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +68,14 @@ public class RegistrasiActivity extends AppCompatActivity {
         TextPassword = findViewById(R.id.edittext_pass);
         TextEmail = findViewById(R.id.edittext_email);
         BtnRegister = findViewById(R.id.button_daftar);
-
+        login = findViewById(R.id.textview_login);
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent login = new Intent(RegistrasiActivity.this,LoginActivity.class);
+                startActivity(login);
+            }
+        });
         BtnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -132,5 +132,6 @@
     <string name="list_decline">List Decline Grooming</string>
     <string name="address">Address</string>
     <string name="status">Status</string>
+    <string name="password">Password</string>
 
 </resources>
